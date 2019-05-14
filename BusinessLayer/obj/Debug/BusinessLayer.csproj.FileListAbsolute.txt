@@ -1,0 +1,6 @@
+C:\Users\student\source\repos\TravelExperts\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\student\source\repos\TravelExperts\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\student\source\repos\TravelExperts\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\student\source\repos\TravelExperts\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\student\source\repos\TravelExperts\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\student\source\repos\TravelExperts\BusinessLayer\obj\Debug\BusinessLayer.pdb
