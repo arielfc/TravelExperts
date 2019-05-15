@@ -13,3 +13,4 @@ C:\Users\student\source\repos\TravelExperts\TravelExperts\bin\Debug\DataLayer.dl
 C:\Users\student\source\repos\TravelExperts\TravelExperts\bin\Debug\BusinessLayer.pdb
 C:\Users\student\source\repos\TravelExperts\TravelExperts\bin\Debug\DataLayer.pdb
 C:\Users\student\source\repos\TravelExperts\TravelExperts\obj\Debug\TravelExperts.csproj.CopyComplete
+C:\Users\student\source\repos\TravelExperts\TravelExperts\obj\Debug\TravelExperts.AddPackage.resources
