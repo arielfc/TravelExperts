@@ -16,8 +16,9 @@ namespace DataLayer
             List<Package> results = new List<Package>();
             try
             {
-                string sql = "SELECT PackageId, PkgName, PkgStartDate, PkgEndDate, PkgDesc, PkgBasePrice, PkgAgencyCommission " +
-                    "FROM Packages ";
+                string sql = "SELECT PackageId, PkgName, PkgStartDate, PkgEndDate," +
+                    " PkgDesc, PkgBasePrice, PkgAgencyCommission " +
+                    " FROM Packages";
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataReader reader = command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
 
