@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer
+namespace DataLayer
 {
-    public class Suppliers
+    public class ProductsDB
     {
-        int SupplierId { get; set; }
-        string SupName { get; set; }
     }
 }

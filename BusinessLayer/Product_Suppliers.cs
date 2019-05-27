@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    class Product_Suppliers
+    public class Product_Suppliers
     {
+        public int ProductSupplierId { get; set; }
+        public int ProductId { get; set; }
+        public int SupplierId { get; set; }
     }
 }
