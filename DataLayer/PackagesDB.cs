@@ -10,48 +10,17 @@ namespace DataLayer
 {
     public class PackagesDB
     {
-        //public List<Package> GetPackages()
-        //{
-        //    SqlConnection connection = TravelExpertsDB.GetConnection();
-        //    List<Package> results = new List<Package>();
-        //    try
-        //    {
-        //        string sql = "SELECT PackageId, PkgName, PkgStartDate, PkgEndDate, PkgDesc, PkgBasePrice, PkgAgencyCommission " +
-        //            "FROM Packages ";
-        //        SqlCommand command = new SqlCommand(sql, connection);
-        //        SqlDataReader reader = command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
-
-        //        while (reader.Read())
-        //        {
-        //            Package p = new Package();
-
-        //            p.PackageID = Convert.ToInt32(reader["PackageId"].ToString());
-        //            p.PkgName = reader["PkgName"].ToString();
-        //            p.PkgStartDate = Convert.ToDateTime(reader["PkgStartDate"].ToString());
-        //            p.PkgEndDate = Convert.ToDateTime(reader["PkgEndDate"].ToString());
-        //            p.PkgDesc = reader["PkgDesc"].ToString();
-        //            p.PkgBasePrice = Convert.ToDecimal(reader["PkgBasePrice"].ToString());
-        //            p.PkgAgencyCommission = Convert.ToDecimal(reader["PkgAgencyCommission"].ToString());
-        //            results.Add(p);
-        //        }
-        //    }
-        //    catch { }
-        //    finally
-        //    {
-        //        connection.Close();
-        //    }
-        //    return results;
-        //}
         public Package GetPackageById(int packageId)
         {
             Package result = new Package();
 
-            //Create the SQL Query for returning an article category based on its primary key
-            string sqlQuery = String.Format("select * from Packages where PackageId={0}", articleId);
+            //Create the SQL Query for returning a package based on its primary key
+            string sqlQuery = String.Format("select * from Packages where PackageId={0}", packageId);
 
             //Create and open a connection to SQL Server 
-            SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString);
-            connection.Open();
+            SqlConnection connection = TravelExpertsDB.GetConnection();
+            if (connection.State != System.Data.ConnectionState.Open)
+                connection.Open();
 
             SqlCommand command = new SqlCommand(sqlQuery, connection);
 
@@ -62,29 +31,28 @@ namespace DataLayer
             {
                 while (dataReader.Read())
                 {
-                    result.ArticleId = Convert.ToInt32(dataReader["ArticleID"]);
-                    result.Body = dataReader["ArticleBody"].ToString();
-                    result.CategoryId = Convert.ToInt32(dataReader["ArticleCategoryID"]);
-                    result.PublishDate = Convert.ToDateTime(dataReader["PublishDate"]);
-                    result.Title = dataReader["ArticleTitle"].ToString();
+                    result.PackageID = Convert.ToInt32(dataReader["PackageID"]);
+                    result.PkgName = dataReader["PkgName"].ToString();
+                    result.PkgStartDate = Convert.ToDateTime(dataReader["PkgStartDate"]);
+                    result.PkgEndDate = Convert.ToDateTime(dataReader["PkgEndDate"]);
+                    result.PkgDesc = dataReader["PkgDesc"].ToString();
+                    result.PkgBasePrice = Convert.ToInt32(dataReader["PkgBasePrice"]);
+                    result.PkgAgencyCommission = Convert.ToInt32(dataReader["PkgAgencyCommission"]);
                 }
             }
 
             return result;
         }
 
-
-
         public int SavePackage(Package package)
         {
-
             //Create the SQL Query for inserting a package
             string createQuery = String.Format("Insert into Packages (PkgName, PkgStartDate , PkgEndDate, PkgDesc, PkgBasePrice, PkgAgencyCommission) Values('{0}', '{1}', '{2}', '{3}', '{4}', {5});"
             + "Select @@Identity", package.PkgName, package.PkgStartDate, package.PkgEndDate, package.PkgDesc, package.PkgBasePrice, package.PkgAgencyCommission);
 
-            //Create the SQL Query for updating an article
-            string updateQuery = String.Format("Update Articles SET PkgName='{0}', PkgStartDate = '{1}', PkgEndDate ='{2}', PkgDesc = '{3}', PkgBasePrice = '{4}', PkgAgencyCommission = {5} Where PackageId = {6};",
-                package.PkgName, package.PkgStartDate, package.PkgEndDate, package.PkgDesc, package.PkgBasePrice, package.PkgAgencyCommission, package.PackageId);
+            //Create the SQL Query for updating a package
+            string updateQuery = String.Format("Update Articles SET PkgName='{0}', PkgStartDate = '{1}', PkgEndDate ='{2}', PkgDesc = '{3}', PkgBasePrice = '{4}', PkgAgencyCommission = {5} Where PackageID = {6};",
+                package.PkgName, package.PkgStartDate, package.PkgEndDate, package.PkgDesc, package.PkgBasePrice, package.PkgAgencyCommission, package.PackageID);
 
             //Create and open a connection to SQL Server 
             SqlConnection connection = TravelExpertsDB.GetConnection();
@@ -127,6 +95,38 @@ namespace DataLayer
 
             return savedPackageID;
         }
+        //public List<Package> GetPackages()
+        //{
+        //    SqlConnection connection = TravelExpertsDB.GetConnection();
+        //    List<Package> results = new List<Package>();
+        //    try
+        //    {
+        //        string sql = "SELECT PackageId, PkgName, PkgStartDate, PkgEndDate, PkgDesc, PkgBasePrice, PkgAgencyCommission " +
+        //            "FROM Packages ";
+        //        SqlCommand command = new SqlCommand(sql, connection);
+        //        SqlDataReader reader = command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+
+        //        while (reader.Read())
+        //        {
+        //            Package p = new Package();
+
+        //            p.PackageID = Convert.ToInt32(reader["PackageId"].ToString());
+        //            p.PkgName = reader["PkgName"].ToString();
+        //            p.PkgStartDate = Convert.ToDateTime(reader["PkgStartDate"].ToString());
+        //            p.PkgEndDate = Convert.ToDateTime(reader["PkgEndDate"].ToString());
+        //            p.PkgDesc = reader["PkgDesc"].ToString();
+        //            p.PkgBasePrice = Convert.ToDecimal(reader["PkgBasePrice"].ToString());
+        //            p.PkgAgencyCommission = Convert.ToDecimal(reader["PkgAgencyCommission"].ToString());
+        //            results.Add(p);
+        //        }
+        //    }
+        //    catch { }
+        //    finally
+        //    {
+        //        connection.Close();
+        //    }
+        //    return results;
+        //}
         //public int InsertPackage(Package package)
         //{
 
