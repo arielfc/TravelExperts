@@ -20,7 +20,12 @@ namespace TravelExperts
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = DataLayer.PackagesDB.GetPackages();
+            //dataGridView1.DataSource = DataLayer.PackagesDB.GetPackages();
+            PackagesDB articlesManager = new PackagesDB();
+
+            comboBox1.DataSource = articlesManager.GetPackage();
+            comboBox1.DisplayMember = "PkgName";
+            comboBox1.ValueMember = "PkgName";
         }
         // Allows Dragging Borderless Form
         protected override void WndProc(ref Message m)
@@ -40,6 +45,16 @@ namespace TravelExperts
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

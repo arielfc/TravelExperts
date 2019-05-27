@@ -10,6 +10,48 @@ namespace DataLayer
 {
     public class PackagesDB
     {
+        public List<Package> GetPackage()
+        {
+
+            List<Package> result = new List<Package>();
+
+            //Create the SQL Query for returning all the articles
+            string sqlQuery = String.Format("select * from Packages");
+
+            //Create and open a connection to SQL Server 
+            SqlConnection connection = TravelExpertsDB.GetConnection();
+            if (connection.State != System.Data.ConnectionState.Open)
+                connection.Open();
+
+            SqlCommand command = new SqlCommand(sqlQuery, connection);
+
+            //Create DataReader for storing the returning table into server memory
+            SqlDataReader dataReader = command.ExecuteReader();
+
+            Package package = null;
+
+            //load into the result object the returned row from the database
+            if (dataReader.HasRows)
+            {
+                while (dataReader.Read())
+                {
+                    package = new Package();
+
+                    package.PackageID = Convert.ToInt32(dataReader["PackageID"]);
+                    package.PkgName = dataReader["PkgName"].ToString();
+                    package.PkgStartDate = Convert.ToDateTime(dataReader["PkgStartDate"]);
+                    package.PkgEndDate = Convert.ToDateTime(dataReader["PkgEndDate"]);
+                    package.PkgDesc = dataReader["PkgDesc"].ToString();
+                    package.PkgBasePrice = Convert.ToInt32(dataReader["PkgBasePrice"]);
+                    package.PkgAgencyCommission = Convert.ToInt32(dataReader["PkgAgencyCommission"]);
+
+                    result.Add(package);
+                }
+            }
+            return result;
+
+        }
+
         public Package GetPackageById(int packageId)
         {
             Package result = new Package();
