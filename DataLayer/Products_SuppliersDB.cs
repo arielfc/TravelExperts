@@ -25,9 +25,9 @@ namespace DataLayer
                 {
                     Product_Supplier s = new Product_Supplier();
 
-                    s.ProductSupplierId = Convert.ToInt32(reader["ProductSupplierId"].ToString());
-                    s.ProductId = Convert.ToInt32(reader["ProductId"].ToString());
-                    s.SupplierId = Convert.ToInt32(reader["SupplierId"].ToString());
+                    s.ProductSupplierId = Convert.ToInt32(reader["ProductSupplierId"]);
+                    s.ProductId = Convert.ToInt32(reader["ProductId"]);
+                    s.SupplierId = Convert.ToInt32(reader["SupplierId"]);
                     results.Add(s);
                 }
 
@@ -57,9 +57,9 @@ namespace DataLayer
                     command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
                 reader.Read();
 
-                result.ProductSupplierId = Convert.ToInt32(reader["ProductSupplierId"].ToString());
-                result.ProductId = Convert.ToInt32(reader["ProductId"].ToString());
-                result.SupplierId = Convert.ToInt32(reader["SupplierId"].ToString());
+                result.ProductSupplierId = Convert.ToInt32(reader["ProductSupplierId"]);
+                result.ProductId = Convert.ToInt32(reader["ProductId"]);
+                result.SupplierId = Convert.ToInt32(reader["SupplierId"]);
             }
             catch (Exception ex)
             {

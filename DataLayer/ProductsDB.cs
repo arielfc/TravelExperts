@@ -24,7 +24,7 @@ namespace DataLayer
                 while (reader.Read())
                 {
                     Product s = new Product();
-                    s.ProductId = Convert.ToInt32(reader["ProductId"].ToString());
+                    s.ProductId = Convert.ToInt32(reader["ProductId"]);
                     s.ProdName = reader["ProdName"].ToString();
                     results.Add(s);
                 }
@@ -54,7 +54,7 @@ namespace DataLayer
                     command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
                 reader.Read();
 
-                result.ProductId = Convert.ToInt32(reader["ProductId"].ToString());
+                result.ProductId = Convert.ToInt32(reader["ProductId"]);
                 result.ProdName = reader["ProdName"].ToString();
             }
             catch (Exception ex)
