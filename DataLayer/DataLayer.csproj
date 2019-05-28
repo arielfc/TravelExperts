@@ -42,7 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PackagesDB.cs" />
+    <Compile Include="ProductsDB.cs" />
+    <Compile Include="Products_SuppliersDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuppliersDB.cs" />
     <Compile Include="TravelExpertsDB.cs" />
   </ItemGroup>
   <ItemGroup>

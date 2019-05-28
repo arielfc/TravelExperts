@@ -7,3 +7,12 @@ C:\Users\student\source\repos\TravelExperts\DataLayer\obj\Debug\DataLayer.csproj
 C:\Users\student\source\repos\TravelExperts\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
 C:\Users\student\source\repos\TravelExperts\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\student\source\repos\TravelExperts\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\barba\source\repos\TravelExperts\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\barba\source\repos\TravelExperts\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\barba\source\repos\TravelExperts\DataLayer\bin\Debug\BusinessLayer.dll
+C:\Users\barba\source\repos\TravelExperts\DataLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\barba\source\repos\TravelExperts\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
+C:\Users\barba\source\repos\TravelExperts\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\barba\source\repos\TravelExperts\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+C:\Users\barba\source\repos\TravelExperts\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\barba\source\repos\TravelExperts\DataLayer\obj\Debug\DataLayer.pdb

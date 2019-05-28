@@ -4,3 +4,9 @@ C:\Users\student\source\repos\TravelExperts\BusinessLayer\obj\Debug\BusinessLaye
 C:\Users\student\source\repos\TravelExperts\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Users\student\source\repos\TravelExperts\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\student\source\repos\TravelExperts\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\barba\source\repos\TravelExperts\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\barba\source\repos\TravelExperts\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\barba\source\repos\TravelExperts\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\barba\source\repos\TravelExperts\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\barba\source\repos\TravelExperts\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\barba\source\repos\TravelExperts\BusinessLayer\obj\Debug\BusinessLayer.pdb
