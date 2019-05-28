@@ -4,28 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using System.Data;
 using BusinessLayer;
 
 namespace DataLayer
 {
-    public class ProductsDB
+    public class Products_SuppliersDB
     {
-        public static List<Product> GetProducts()
+        public static List<Product_Supplier> GetProducts_Suppliers()
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
-            List<Product> results = new List<Product>();
+            List<Product_Supplier> results = new List<Product_Supplier>();
             try
             {
-                string sql = "SELECT ProductId, ProdName FROM Products";
+                string sql = "SELECT ProductSupplierID, ProductId, " +
+                    " SupplierId FROM Products_Suppliers";
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataReader reader =
                     command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
                 while (reader.Read())
                 {
-                    Product s = new Product();
+                    Product_Supplier s = new Product_Supplier();
+
+                    s.ProductSupplierId = Convert.ToInt32(reader["ProductSupplierId"].ToString());
                     s.ProductId = Convert.ToInt32(reader["ProductId"].ToString());
-                    s.ProdName = reader["ProdName"].ToString();
+                    s.SupplierId = Convert.ToInt32(reader["SupplierId"].ToString());
                     results.Add(s);
                 }
 
@@ -40,22 +42,24 @@ namespace DataLayer
             }
             return results;
         }
-        public static Product GetProductByID(int id)
+        public static Product_Supplier GetPSByID(int id)
         {
 
             SqlConnection connection = TravelExpertsDB.GetConnection();
-            Product result = new Product();
+            Product_Supplier result = new Product_Supplier();
             try
             {
-                string sql = "SELECT ProductId, ProdName FROM Products " +
-                    " WHERE ProductId="+id;
+                string sql = "SELECT ProductSupplierID, ProductId, " +
+                    " SupplierId FROM Products " +
+                    " WHERE ProductSupplierID=" + id;
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataReader reader =
                     command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
                 reader.Read();
 
+                result.ProductSupplierId = Convert.ToInt32(reader["ProductSupplierId"].ToString());
                 result.ProductId = Convert.ToInt32(reader["ProductId"].ToString());
-                result.ProdName = reader["ProdName"].ToString();
+                result.SupplierId = Convert.ToInt32(reader["SupplierId"].ToString());
             }
             catch (Exception ex)
             {
@@ -69,18 +73,21 @@ namespace DataLayer
 
         }
 
-        public bool UpdateProduct(int id, string name)
+        public bool UpdatePS(int psid, int pid, int sid)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
-            Product result = new Product();
+            Product_Supplier result = new Product_Supplier();
             int rowAffected = 0;
             try
             {
-                string sql = "UPDATE Products SET ProdName=@name " +
-                    " WHERE ProductId=@id";
+                string sql = "UPDATE Products_Suppliers SET ProductId=@pid," +
+                    " SupplierId=@sid " +
+                    " WHERE ProductSupplierId=@psid";
                 SqlCommand command = new SqlCommand(sql, connection);
-                
-                command.Parameters.AddWithValue("@name", name);
+
+                command.Parameters.AddWithValue("@psid", psid);
+                command.Parameters.AddWithValue("@pid", pid);
+                command.Parameters.AddWithValue("@sid", sid);
                 rowAffected = command.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -91,7 +98,7 @@ namespace DataLayer
             {
                 connection.Close();
             }
-            if (rowAffected>0)
+            if (rowAffected > 0)
             {
                 return true;
             }
@@ -101,18 +108,20 @@ namespace DataLayer
             }
         }
 
-        public bool AddProduct(string name)
+        public bool AddPS(int pid, int sid)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
-            Product result = new Product();
+            Product_Supplier result = new Product_Supplier();
             int rowAffected = 0;
             try
             {
-                string sql = "INSERT INTO Products (ProdName) " +
-                    " VALUES @name;";
+                string sql = "INSERT INTO Products_Suppliers (ProductId, " +
+                    " SupplierId) " +
+                    " VALUES (@pid, @sid);";
                 SqlCommand command = new SqlCommand(sql, connection);
-                
-                command.Parameters.AddWithValue("@name", name);
+
+                command.Parameters.AddWithValue("@pid", pid);
+                command.Parameters.AddWithValue("@sid", sid);
                 rowAffected = command.ExecuteNonQuery();
             }
             catch (Exception ex)

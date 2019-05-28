@@ -4,28 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using System.Data;
 using BusinessLayer;
 
 namespace DataLayer
 {
-    public class ProductsDB
+    public  class SuppliersDB
     {
-        public static List<Product> GetProducts()
+        public static List<Supplier> GetSuppliers()
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
-            List<Product> results = new List<Product>();
+            List<Supplier> results = new List<Supplier>();
             try
             {
-                string sql = "SELECT ProductId, ProdName FROM Products";
+                string sql = "SELECT SupplierId, SupName FROM Suppliers";
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataReader reader =
                     command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
                 while (reader.Read())
                 {
-                    Product s = new Product();
-                    s.ProductId = Convert.ToInt32(reader["ProductId"].ToString());
-                    s.ProdName = reader["ProdName"].ToString();
+                    Supplier s = new Supplier();
+                    s.SupplierId = Convert.ToInt32(reader["SupplierId"].ToString());
+                    s.SupName = reader["SupName"].ToString();
                     results.Add(s);
                 }
 
@@ -40,22 +39,22 @@ namespace DataLayer
             }
             return results;
         }
-        public static Product GetProductByID(int id)
+        public static Supplier GetSupplierByID(int id)
         {
 
             SqlConnection connection = TravelExpertsDB.GetConnection();
-            Product result = new Product();
+            Supplier result = new Supplier();
             try
             {
-                string sql = "SELECT ProductId, ProdName FROM Products " +
-                    " WHERE ProductId="+id;
+                string sql = "SELECT SupplierId, SupName FROM Suppliers " +
+                    " WHERE SupplierId=" + id;
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataReader reader =
                     command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
                 reader.Read();
 
-                result.ProductId = Convert.ToInt32(reader["ProductId"].ToString());
-                result.ProdName = reader["ProdName"].ToString();
+                result.SupplierId = Convert.ToInt32(reader["SupplierId"].ToString());
+                result.SupName = reader["SupName"].ToString();
             }
             catch (Exception ex)
             {
@@ -69,17 +68,17 @@ namespace DataLayer
 
         }
 
-        public bool UpdateProduct(int id, string name)
+        public bool UpdateSupplier (int id, string name)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
             Product result = new Product();
             int rowAffected = 0;
             try
             {
-                string sql = "UPDATE Products SET ProdName=@name " +
+                string sql = "UPDATE Supplier SET SupName=@name " +
                     " WHERE ProductId=@id";
                 SqlCommand command = new SqlCommand(sql, connection);
-                
+
                 command.Parameters.AddWithValue("@name", name);
                 rowAffected = command.ExecuteNonQuery();
             }
@@ -91,7 +90,7 @@ namespace DataLayer
             {
                 connection.Close();
             }
-            if (rowAffected>0)
+            if (rowAffected > 0)
             {
                 return true;
             }
@@ -101,17 +100,17 @@ namespace DataLayer
             }
         }
 
-        public bool AddProduct(string name)
+        public bool AddSupplier(string name)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
             Product result = new Product();
             int rowAffected = 0;
             try
             {
-                string sql = "INSERT INTO Products (ProdName) " +
-                    " VALUES @name;";
+                string sql = "INSERT INTO Suppliers (SupName) " +
+                    " VALUES (@name);";
                 SqlCommand command = new SqlCommand(sql, connection);
-                
+
                 command.Parameters.AddWithValue("@name", name);
                 rowAffected = command.ExecuteNonQuery();
             }

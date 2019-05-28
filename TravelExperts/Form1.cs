@@ -56,5 +56,39 @@ namespace TravelExperts
         {
             
         }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb != null)
+            {
+                if (rb.Checked)
+                {
+                    // Only one radio button will be checked
+                    //Console.WriteLine("Changed: " + rb.Name);
+                    //datagridview2.source = DataLayer.ProductsDB.GetProducts(); 
+                }
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb != null)
+            {
+                if (rb.Checked)
+                {
+                    // Only one radio button will be checked
+                    //Console.WriteLine("Changed: " + rb.Name);
+                    //datagridview2.source = DataLayer.SupplierDB.GetSuppliers(); 
+                }
+            }
+
+        }
     }
 }
