@@ -94,14 +94,14 @@ namespace TravelExperts
                 return;
 
             Package pkg = new Package();
-            pkg = articlesManager.GetPackageById(comboBox1.SelectedIndex+1);
+            pkg = articlesManager.GetPackageById(comboBox1.SelectedIndex + 1);
 
-            textBox3.Text = pkg.PkgName;
-            textBox4.Text = pkg.PkgStartDate.ToString();
-            textBox1.Text = pkg.PkgEndDate.ToString();
-            textBox2.Text = pkg.PkgDesc;
-            textBox6.Text = pkg.PkgBasePrice.ToString();
-            textBox5.Text = pkg.PkgAgencyCommission.ToString();
+            txtName.Text = pkg.PkgName;
+            txtStartDate.Text = pkg.PkgStartDate.ToString();
+            txtEndDate.Text = pkg.PkgEndDate.ToString();
+            txtDesc.Text = pkg.PkgDesc;
+            txtPrice.Text = pkg.PkgBasePrice.ToString();
+            txtCommission.Text = pkg.PkgAgencyCommission.ToString();
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -122,6 +122,22 @@ namespace TravelExperts
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var formPopup = new Form2();
+            formPopup.Show(this);
         }
     }
 }
