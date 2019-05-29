@@ -29,3 +29,4 @@ C:\Users\barba\source\repos\TravelExperts\TravelExperts\obj\Debug\TravelExperts.
 C:\Users\barba\source\repos\TravelExperts\TravelExperts\obj\Debug\TravelExperts.csproj.CopyComplete
 C:\Users\barba\source\repos\TravelExperts\TravelExperts\obj\Debug\TravelExperts.exe
 C:\Users\barba\source\repos\TravelExperts\TravelExperts\obj\Debug\TravelExperts.pdb
+C:\Users\barba\source\repos\TravelExperts\TravelExperts\obj\Debug\TravelExperts.Form2.resources

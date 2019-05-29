@@ -69,7 +69,7 @@ namespace DataLayer
 
         }
 
-        public bool UpdateProduct(int id, string name)
+        public static bool UpdateProduct(int id, string name)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
             Product result = new Product();
@@ -101,7 +101,7 @@ namespace DataLayer
             }
         }
 
-        public bool AddProduct(string name)
+        public static bool AddProduct(string name)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
             Product result = new Product();

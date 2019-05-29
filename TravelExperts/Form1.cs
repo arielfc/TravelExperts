@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataLayer;
+using BusinessLayer;
 
 namespace TravelExperts
 {
     public partial class Form1 : Form
     {
+        // 20190529 moved here -> global
+        PackagesDB articlesManager = new PackagesDB();
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +24,6 @@ namespace TravelExperts
         private void Form1_Load(object sender, EventArgs e)
         {
             //dataGridView1.DataSource = DataLayer.PackagesDB.GetPackages();
-            PackagesDB articlesManager = new PackagesDB();
 
             comboBox1.DataSource = articlesManager.GetPackage();
             comboBox1.DisplayMember = "PkgName";
@@ -51,12 +53,7 @@ namespace TravelExperts
         {
             this.Close();
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -88,6 +85,42 @@ namespace TravelExperts
                     //datagridview2.source = DataLayer.SupplierDB.GetSuppliers(); 
                 }
             }
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == -1)
+                return;
+
+            Package pkg = new Package();
+            pkg = articlesManager.GetPackageById(comboBox1.SelectedIndex+1);
+
+            textBox3.Text = pkg.PkgName;
+            textBox4.Text = pkg.PkgStartDate.ToString();
+            textBox1.Text = pkg.PkgEndDate.ToString();
+            textBox2.Text = pkg.PkgDesc;
+            textBox6.Text = pkg.PkgBasePrice.ToString();
+            textBox5.Text = pkg.PkgAgencyCommission.ToString();
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
