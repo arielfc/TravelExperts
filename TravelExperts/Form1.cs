@@ -161,5 +161,10 @@ namespace TravelExperts
             this.panel14.SendToBack();
             this.panel4.BringToFront();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
