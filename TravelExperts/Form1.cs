@@ -23,6 +23,8 @@ namespace TravelExperts
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.panel14.SendToBack();
+            this.panel4.BringToFront();
             //dataGridView1.DataSource = DataLayer.PackagesDB.GetPackages();
 
             comboBox1.DataSource = articlesManager.GetPackage();
@@ -56,11 +58,15 @@ namespace TravelExperts
         
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
-
+            this.panel14.SendToBack();
+            this.panel4.BringToFront();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            this.panel4.SendToBack();
+            this.panel14.BringToFront();
+           
             RadioButton rb = sender as RadioButton;
             if (rb != null)
             {
@@ -138,6 +144,22 @@ namespace TravelExperts
         {
             var formPopup = new Form2();
             formPopup.Show(this);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            this.panel14.SendToBack();
+            this.panel4.BringToFront();
         }
     }
 }
