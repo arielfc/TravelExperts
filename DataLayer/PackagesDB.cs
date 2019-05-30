@@ -15,7 +15,7 @@ namespace DataLayer
 
             List<Package> result = new List<Package>();
 
-            //Create the SQL Query for returning all the articles
+            //Create the SQL Query for returning all the packages
             string sqlQuery = String.Format("select * from Packages");
 
             //Create and open a connection to SQL Server 
@@ -92,7 +92,7 @@ namespace DataLayer
             + "Select @@Identity", package.PkgName, package.PkgStartDate, package.PkgEndDate, package.PkgDesc, package.PkgBasePrice, package.PkgAgencyCommission);
 
             //Create the SQL Query for updating a package
-            string updateQuery = String.Format("Update Articles SET PkgName='{0}', PkgStartDate = '{1}', PkgEndDate ='{2}', PkgDesc = '{3}', PkgBasePrice = '{4}', PkgAgencyCommission = {5} Where PackageID = {6};",
+            string updateQuery = String.Format("Update Packages SET PkgName='{0}', PkgStartDate = '{1}', PkgEndDate ='{2}', PkgDesc = '{3}', PkgBasePrice = '{4}', PkgAgencyCommission = {5} Where PackageID = {6};",
                 package.PkgName, package.PkgStartDate, package.PkgEndDate, package.PkgDesc, package.PkgBasePrice, package.PkgAgencyCommission, package.PackageID);
 
             //Create and open a connection to SQL Server 

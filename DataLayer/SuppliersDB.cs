@@ -39,7 +39,7 @@ namespace DataLayer
             }
             return results;
         }
-        public static Supplier GetSupplierByID(int id)
+        public Supplier GetSupplierByID(int id)
         {
 
             SqlConnection connection = TravelExpertsDB.GetConnection();

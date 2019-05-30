@@ -15,7 +15,8 @@ namespace TravelExperts
     public partial class Form1 : Form
     {
         // 20190529 moved here -> global
-        PackagesDB articlesManager = new PackagesDB();
+        PackagesDB packageManager = new PackagesDB();
+        SuppliersDB supplierManager = new SuppliersDB();
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace TravelExperts
             this.panel4.BringToFront();
             //dataGridView1.DataSource = DataLayer.PackagesDB.GetPackages();
 
-            comboBox1.DataSource = articlesManager.GetPackage();
+            comboBox1.DataSource = packageManager.GetPackage();
             comboBox1.DisplayMember = "PkgName";
             comboBox1.ValueMember = "PkgName";
         }
@@ -100,11 +101,13 @@ namespace TravelExperts
                 return;
 
             Package pkg = new Package();
-            pkg = articlesManager.GetPackageById(comboBox1.SelectedIndex + 1);
+            pkg = packageManager.GetPackageById(comboBox1.SelectedIndex + 1);
 
             txtName.Text = pkg.PkgName;
-            txtStartDate.Text = pkg.PkgStartDate.ToString();
-            txtEndDate.Text = pkg.PkgEndDate.ToString();
+            //txtStartDate.Text = pkg.PkgStartDate.ToString();
+            //txtEndDate.Text = pkg.PkgEndDate.ToString();
+            dateTimePicker1.Value = pkg.PkgStartDate;
+            dateTimePicker2.Value = pkg.PkgEndDate;
             txtDesc.Text = pkg.PkgDesc;
             txtPrice.Text = pkg.PkgBasePrice.ToString();
             txtCommission.Text = pkg.PkgAgencyCommission.ToString();
@@ -165,6 +168,24 @@ namespace TravelExperts
         private void button5_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+        
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == -1)
+                return;
+
+            
+            Supplier supplier = new Supplier();
+            supplier = supplierManager.GetSupplierByID(comboBox1.SelectedIndex + 1);
+
+            //txtName.Text = supplier.SupplierId;
+            //txtStartDate.Text = supplier.SupName;
+        }
+
+        private void panel15_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
