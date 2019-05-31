@@ -94,7 +94,7 @@ namespace DataLayer
             {
                 connection.Close();
             }
-            return result;
+            return results;
 
         }
 

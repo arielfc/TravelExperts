@@ -27,7 +27,7 @@ namespace TravelExperts
         }
 
         private void Form2_Load(object sender, EventArgs e)
-        {/*
+        {
             listBox1.DataSource = products;
             listBox1.DisplayMember = "ProdName";
             listBox1.SetSelected(0, true);
@@ -36,7 +36,7 @@ namespace TravelExperts
             tempList = Products_SuppliersDB.GetPSByProductID(products[0].ProductId);
             List <Supplier> sList = new List<Supplier>();
             
-            
+            /*
             sList= SuppliersDB.GetSupplierListByID(l.SupplierId);
             
             listBox2.DataSource = sList;
