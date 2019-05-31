@@ -41,7 +41,6 @@ namespace DataLayer
         }
         public Supplier GetSupplierByID(int id)
         {
-
             SqlConnection connection = TravelExpertsDB.GetConnection();
             Supplier result = new Supplier();
             try
@@ -55,6 +54,37 @@ namespace DataLayer
 
                 result.SupplierId = Convert.ToInt32(reader["SupplierId"]);
                 result.SupName = reader["SupName"].ToString();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return result;
+
+        }
+        public static List<Supplier> GetSupplierListByID(int id)
+        {
+            SqlConnection connection = TravelExpertsDB.GetConnection();
+            List<Supplier> results = new List<Supplier>();
+            try
+            {
+                string sql = "SELECT SupplierId, SupName FROM Suppliers " +
+                    " WHERE SupplierId=" + id;
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader =
+                    command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+                while(reader.Read())
+                {
+                    Supplier s = new Supplier();
+                    s.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+                    s.SupName = reader["SupName"].ToString();
+                    results.Add(s);
+                }
+
             }
             catch (Exception ex)
             {

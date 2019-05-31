@@ -8,7 +8,7 @@ using BusinessLayer;
 
 namespace DataLayer
 {
-    public class Products_SuppliersDB
+    public static class Products_SuppliersDB
     {
         public static List<Product_Supplier> GetProducts_Suppliers()
         {
@@ -50,7 +50,7 @@ namespace DataLayer
             try
             {
                 string sql = "SELECT ProductSupplierID, ProductId, " +
-                    " SupplierId FROM Products " +
+                    " SupplierId FROM Products_Suppliers " +
                     " WHERE ProductSupplierID=" + id;
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataReader reader =
@@ -72,8 +72,41 @@ namespace DataLayer
             return result;
 
         }
+        public static List<Product_Supplier> GetPSByProductID(int pid)
+        {
 
-        public bool UpdatePS(int psid, int pid, int sid)
+            SqlConnection connection = TravelExpertsDB.GetConnection();
+            List <Product_Supplier> results = new List<Product_Supplier>();
+            try
+            {
+                string sql = "SELECT ProductSupplierId, ProductId, " +
+                    " SupplierId FROM Products_Suppliers " +
+                    " WHERE ProductId=" + pid;
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader =
+                    command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    Product_Supplier s = new Product_Supplier();
+                    s.ProductSupplierId = Convert.ToInt32(reader["ProductSupplierId"]);
+                    s.ProductId = Convert.ToInt32(reader["ProductId"]);
+                    s.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+                    results.Add(s);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return results;
+
+        }
+
+        public static bool UpdatePS(int psid, int pid, int sid)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
             Product_Supplier result = new Product_Supplier();
@@ -108,7 +141,7 @@ namespace DataLayer
             }
         }
 
-        public bool AddPS(int pid, int sid)
+        public static bool AddPS(int pid, int sid)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
             Product_Supplier result = new Product_Supplier();

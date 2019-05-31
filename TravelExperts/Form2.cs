@@ -27,11 +27,22 @@ namespace TravelExperts
         }
 
         private void Form2_Load(object sender, EventArgs e)
-        {
+        {/*
             listBox1.DataSource = products;
             listBox1.DisplayMember = "ProdName";
-            listBox1.SetSelected(1, true);
+            listBox1.SetSelected(0, true);
 
+            List<Product_Supplier> tempList = new List<Product_Supplier>();
+            tempList = Products_SuppliersDB.GetPSByProductID(products[0].ProductId);
+            List <Supplier> sList = new List<Supplier>();
+            
+            
+            sList= SuppliersDB.GetSupplierListByID(l.SupplierId);
+            
+            listBox2.DataSource = sList;
+            listBox1.DisplayMember = "SupName";
+            listBox1.SetSelected(0, true);
+            */
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,6 +52,18 @@ namespace TravelExperts
                 GetSupplierByID(products[listBox1.SelectedIndex + 1].);
 
             listBox2.DataSource = ;*/
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string name = textBox1.Text;
+            ProductsDB.AddProduct(name);
+            Product newproduct = ProductsDB.GetProductByName(name);
+            products.Add(newproduct);
+            listBox1.DataSource = null;
+            listBox1.DataSource = products;
+            listBox1.DisplayMember = "ProdName";
+            this.listBox1.SelectedIndex = this.listBox1.Items.Count - 1;
         }
     }
 }
