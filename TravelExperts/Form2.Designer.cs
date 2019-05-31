@@ -195,7 +195,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(61, 51);
             this.button8.TabIndex = 108;
-            this.button8.Text = "<-";
+            this.button8.Text = "<=";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
@@ -254,7 +254,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(61, 51);
             this.button2.TabIndex = 104;
-            this.button2.Text = "->";
+            this.button2.Text = "=>";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // listBox2

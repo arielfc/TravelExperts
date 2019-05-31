@@ -96,7 +96,34 @@ namespace DataLayer
             return result;
 
         }
+        public static Product GetProductByName(string n)
+        {
 
+            SqlConnection connection = TravelExpertsDB.GetConnection();
+            Product result = new Product();
+            try
+            {
+                string sql = "SELECT ProductId, ProdName FROM Products " +
+                    " WHERE ProdName=" + "'" + n + "'";
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader =
+                    command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+                reader.Read();
+
+                result.ProductId = Convert.ToInt32(reader["ProductId"]);
+                result.ProdName = reader["ProdName"].ToString();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return result;
+
+        }
         public static bool UpdateProduct(int id, string name)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
