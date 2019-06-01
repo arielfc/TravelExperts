@@ -31,7 +31,7 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-
+				throw ex;
             }
             finally
             {
@@ -57,7 +57,7 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-
+				throw ex;
             }
             finally
             {
@@ -88,7 +88,7 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-
+				throw ex;
             }
             finally
             {
@@ -98,23 +98,50 @@ namespace DataLayer
 
         }
 
-        public bool UpdateSupplier (int id, string name)
+		public static int GetMaxId()
+		{
+
+			SqlConnection connection = TravelExpertsDB.GetConnection();
+			int result = 0;
+			try
+			{
+				string sql = "SELECT MAX(SupplierId) AS MaxId FROM Suppliers";
+				SqlCommand command = new SqlCommand(sql, connection);
+				SqlDataReader reader =
+					command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+				reader.Read();
+				result = Convert.ToInt32(reader["MaxId"]);
+			}
+			catch (Exception ex)
+			{
+				throw ex;
+			}
+			finally
+			{
+				connection.Close();
+			}
+			return result;
+
+		}
+
+
+		public static bool UpdateSupplier (int id, string name)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
-            Product result = new Product();
             int rowAffected = 0;
             try
             {
-                string sql = "UPDATE Supplier SET SupName=@name " +
-                    " WHERE ProductId=@id";
+                string sql = "UPDATE Suppliers SET SupName=@name " +
+					" WHERE SupplierId=@id";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@name", name);
-                rowAffected = command.ExecuteNonQuery();
+				command.Parameters.AddWithValue("@id", id);
+				rowAffected = command.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-
+				throw ex;
             }
             finally
             {
@@ -130,23 +157,23 @@ namespace DataLayer
             }
         }
 
-        public bool AddSupplier(string name)
+        public static bool AddSupplier(int id, string name)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
-            Product result = new Product();
             int rowAffected = 0;
             try
             {
-                string sql = "INSERT INTO Suppliers (SupName) " +
-                    " VALUES (@name);";
+                string sql = "INSERT INTO Suppliers (SupplierId, SupName) " +
+                    " VALUES (@id, @name);";
                 SqlCommand command = new SqlCommand(sql, connection);
 
-                command.Parameters.AddWithValue("@name", name);
+				command.Parameters.AddWithValue("@id", id);
+				command.Parameters.AddWithValue("@name", name);
                 rowAffected = command.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-
+				throw ex;
             }
             finally
             {
