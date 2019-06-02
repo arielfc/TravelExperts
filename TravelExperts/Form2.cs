@@ -203,5 +203,10 @@ namespace TravelExperts
                 errorProvider5.SetError(listBox3, null);
             }*/
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

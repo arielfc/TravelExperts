@@ -45,19 +45,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.lblAddItem = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.txtAddItem = new System.Windows.Forms.TextBox();
-            this.lblUpdateItem = new System.Windows.Forms.Label();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.txtUpdateItem = new System.Windows.Forms.TextBox();
-            this.lblItemList = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel21 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -71,6 +58,19 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblAddItem = new System.Windows.Forms.Label();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.txtAddItem = new System.Windows.Forms.TextBox();
+            this.lblUpdateItem = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.txtUpdateItem = new System.Windows.Forms.TextBox();
+            this.lblItemList = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -102,7 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.panel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel19.SuspendLayout();
@@ -110,6 +109,7 @@
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel18.SuspendLayout();
+            this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel15.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -365,6 +365,152 @@
             this.panel4.TabIndex = 2;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.White;
+            this.panel21.Controls.Add(this.label15);
+            this.panel21.Controls.Add(this.label16);
+            this.panel21.Controls.Add(this.pictureBox5);
+            this.panel21.Location = new System.Drawing.Point(81, 711);
+            this.panel21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(472, 171);
+            this.panel21.TabIndex = 80;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(160, 57);
+            this.label15.Name = "label15";
+            this.label15.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.label15.Size = new System.Drawing.Size(258, 56);
+            this.label15.TabIndex = 75;
+            this.label15.Text = "Total Bookings";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(58, 62);
+            this.label16.Name = "label16";
+            this.label16.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.label16.Size = new System.Drawing.Size(51, 54);
+            this.label16.TabIndex = 58;
+            this.label16.Text = "1";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(159, 162);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.White;
+            this.panel19.Controls.Add(this.label10);
+            this.panel19.Controls.Add(this.label11);
+            this.panel19.Controls.Add(this.pictureBox2);
+            this.panel19.Location = new System.Drawing.Point(81, 483);
+            this.panel19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(472, 171);
+            this.panel19.TabIndex = 79;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(160, 57);
+            this.label10.Name = "label10";
+            this.label10.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.label10.Size = new System.Drawing.Size(280, 56);
+            this.label10.TabIndex = 75;
+            this.label10.Text = "Total Customers";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(58, 62);
+            this.label11.Name = "label11";
+            this.label11.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.label11.Size = new System.Drawing.Size(51, 54);
+            this.label11.TabIndex = 58;
+            this.label11.Text = "1";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(159, 162);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.White;
+            this.panel20.Controls.Add(this.label13);
+            this.panel20.Controls.Add(this.label8);
+            this.panel20.Controls.Add(this.pictureBox4);
+            this.panel20.Location = new System.Drawing.Point(81, 255);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(472, 171);
+            this.panel20.TabIndex = 78;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
+            this.label13.Location = new System.Drawing.Point(160, 57);
+            this.label13.Name = "label13";
+            this.label13.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.label13.Size = new System.Drawing.Size(272, 56);
+            this.label13.TabIndex = 75;
+            this.label13.Text = "Total Packages";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(58, 62);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.label8.Size = new System.Drawing.Size(51, 54);
+            this.label8.TabIndex = 58;
+            this.label8.Text = "1";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(159, 162);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.White;
+            this.panel18.Controls.Add(this.label12);
+            this.panel18.Controls.Add(this.pictureBox3);
+            this.panel18.Location = new System.Drawing.Point(81, 28);
+            this.panel18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(472, 171);
+            this.panel18.TabIndex = 77;
+            // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
@@ -380,7 +526,7 @@
             this.panel13.Controls.Add(this.lblItemList);
             this.panel13.Controls.Add(this.panel22);
             this.panel13.Controls.Add(this.comboBox2);
-            this.panel13.Location = new System.Drawing.Point(89, 68);
+            this.panel13.Location = new System.Drawing.Point(0, 0);
             this.panel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(446, 855);
@@ -525,153 +671,6 @@
             this.comboBox2.Size = new System.Drawing.Size(343, 38);
             this.comboBox2.TabIndex = 0;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.White;
-            this.panel21.Controls.Add(this.label15);
-            this.panel21.Controls.Add(this.label16);
-            this.panel21.Controls.Add(this.pictureBox5);
-            this.panel21.Location = new System.Drawing.Point(81, 711);
-            this.panel21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(472, 171);
-            this.panel21.TabIndex = 80;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(160, 57);
-            this.label15.Name = "label15";
-            this.label15.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label15.Size = new System.Drawing.Size(258, 56);
-            this.label15.TabIndex = 75;
-            this.label15.Text = "Total Bookings";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(58, 62);
-            this.label16.Name = "label16";
-            this.label16.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label16.Size = new System.Drawing.Size(51, 54);
-            this.label16.TabIndex = 58;
-            this.label16.Text = "1";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(4, 5);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(159, 162);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.White;
-            this.panel19.Controls.Add(this.label10);
-            this.panel19.Controls.Add(this.label11);
-            this.panel19.Controls.Add(this.pictureBox2);
-            this.panel19.Location = new System.Drawing.Point(81, 483);
-            this.panel19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(472, 171);
-            this.panel19.TabIndex = 79;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(160, 57);
-            this.label10.Name = "label10";
-            this.label10.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label10.Size = new System.Drawing.Size(280, 56);
-            this.label10.TabIndex = 75;
-            this.label10.Text = "Total Customers";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(58, 62);
-            this.label11.Name = "label11";
-            this.label11.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label11.Size = new System.Drawing.Size(51, 54);
-            this.label11.TabIndex = 58;
-            this.label11.Text = "1";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(4, 5);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(159, 162);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.White;
-            this.panel20.Controls.Add(this.label13);
-            this.panel20.Controls.Add(this.label8);
-            this.panel20.Controls.Add(this.pictureBox4);
-            this.panel20.Location = new System.Drawing.Point(81, 255);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(472, 171);
-            this.panel20.TabIndex = 78;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(160, 57);
-            this.label13.Name = "label13";
-            this.label13.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label13.Size = new System.Drawing.Size(272, 56);
-            this.label13.TabIndex = 75;
-            this.label13.Text = "Total Packages";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(58, 62);
-            this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label8.Size = new System.Drawing.Size(51, 54);
-            this.label8.TabIndex = 58;
-            this.label8.Text = "1";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(4, 5);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(159, 162);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.White;
-            this.panel18.Controls.Add(this.panel13);
-            this.panel18.Controls.Add(this.label12);
-            this.panel18.Controls.Add(this.pictureBox3);
-            this.panel18.Location = new System.Drawing.Point(81, 28);
-            this.panel18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(472, 171);
-            this.panel18.TabIndex = 77;
             // 
             // label12
             // 
@@ -950,6 +949,7 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.panel13);
             this.panel14.Controls.Add(this.label7);
             this.panel14.Controls.Add(this.panel6);
             this.panel14.Controls.Add(this.comboBox1);
@@ -1002,8 +1002,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -1015,6 +1013,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
