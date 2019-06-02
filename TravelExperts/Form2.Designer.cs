@@ -69,6 +69,7 @@
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel13.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel13
@@ -160,7 +162,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(205, 104);
+            this.label11.Location = new System.Drawing.Point(302, 104);
             this.label11.Name = "label11";
             this.label11.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.label11.Size = new System.Drawing.Size(91, 39);
@@ -181,20 +183,22 @@
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
+            this.listBox3.HorizontalScrollbar = true;
             this.listBox3.ItemHeight = 20;
-            this.listBox3.Location = new System.Drawing.Point(391, 167);
+            this.listBox3.Location = new System.Drawing.Point(243, 394);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(198, 164);
+            this.listBox3.Size = new System.Drawing.Size(335, 164);
             this.listBox3.TabIndex = 109;
+            this.listBox3.Validating += new System.ComponentModel.CancelEventHandler(this.listBox3_Validating);
             // 
             // button8
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(324, 257);
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(54, 485);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(61, 51);
+            this.button8.Size = new System.Drawing.Size(158, 60);
             this.button8.TabIndex = 108;
-            this.button8.Text = "<=";
+            this.button8.Text = "<=Delete from Package";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -213,7 +217,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(387, 99);
+            this.label9.Location = new System.Drawing.Point(242, 334);
             this.label9.Name = "label9";
             this.label9.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.label9.Size = new System.Drawing.Size(214, 60);
@@ -226,28 +230,29 @@
             this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(54, 167);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 164);
+            this.listBox1.Size = new System.Drawing.Size(196, 164);
             this.listBox1.TabIndex = 102;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(323, 187);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(54, 394);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 51);
+            this.button2.Size = new System.Drawing.Size(158, 67);
             this.button2.TabIndex = 104;
-            this.button2.Text = "=>";
+            this.button2.Text = "Add to Package=>";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
+            this.listBox2.HorizontalScrollbar = true;
             this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(197, 167);
+            this.listBox2.Location = new System.Drawing.Point(306, 167);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 164);
+            this.listBox2.Size = new System.Drawing.Size(272, 164);
             this.listBox2.TabIndex = 103;
             // 
             // button1
@@ -495,6 +500,10 @@
             // 
             this.errorProvider4.ContainerControl = this;
             // 
+            // errorProvider5
+            // 
+            this.errorProvider5.ContainerControl = this;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -518,6 +527,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -563,5 +573,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider4;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ErrorProvider errorProvider5;
     }
 }

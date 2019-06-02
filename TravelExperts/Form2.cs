@@ -186,5 +186,20 @@ namespace TravelExperts
                 errorProvider4.SetError(textBox10, null);
             }
         }
+
+        private void listBox3_Validating(object sender, CancelEventArgs e)
+        {/*
+            if (string.IsNullOrWhiteSpace(listBox3.ValueMember))
+            {
+                e.Cancel = true;
+                button2.Focus();
+                errorProvider5.SetError(listBox3, "Please Enter Package Description !");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider5.SetError(listBox3, null);
+            }*/
+        }
     }
 }
