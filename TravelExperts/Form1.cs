@@ -17,8 +17,11 @@ namespace TravelExperts
         // 20190529 moved here -> global
         PackagesDB packageManager = new PackagesDB();
         SuppliersDB supplierManager = new SuppliersDB();
-		//Set Panel status
-		enum PanelStatus {Products, Suppliers}
+        // 20190602 make pkges as combox datasource
+        List<Package> pkges = new List<Package>();
+
+        //Set Panel status
+        enum PanelStatus {Products, Suppliers}
 		PanelStatus panelStatus;
 
         public Form1()
@@ -32,8 +35,8 @@ namespace TravelExperts
             this.panel14.BringToFront();
             this.panel13.BringToFront();
             //dataGridView1.DataSource = DataLayer.PackagesDB.GetPackages();
-
-            comboBox1.DataSource = packageManager.GetPackage();
+            pkges = packageManager.GetPackage();
+            comboBox1.DataSource = pkges;
             comboBox1.DisplayMember = "PkgName";
             comboBox1.ValueMember = "PkgName";
 
@@ -146,7 +149,9 @@ namespace TravelExperts
                 return;
 
             Package pkg = new Package();
-            pkg = packageManager.GetPackageById(comboBox1.SelectedIndex + 1);
+            // 20190602 could be a problem when packageIds are not sequenced
+            //pkg = packageManager.GetPackageById(comboBox1.SelectedIndex + 1);
+            pkg = pkges[comboBox1.SelectedIndex];
 
             txtName.Text = pkg.PkgName;
             //txtStartDate.Text = pkg.PkgStartDate.ToString();

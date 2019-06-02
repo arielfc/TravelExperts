@@ -8,9 +8,9 @@ using BusinessLayer;
 
 namespace DataLayer
 {
-    class Packages_Products_SuppliersDB
+    public class Packages_Products_SuppliersDB
     {
-        public List<Packages_Products_Supplier> GetPackages_Products_Suppliers()
+        public static List<Packages_Products_Supplier> GetPackages_Products_Suppliers()
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
             List<Packages_Products_Supplier> results = new List<Packages_Products_Supplier>();
@@ -41,7 +41,7 @@ namespace DataLayer
             return results;
         }
 
-        public bool UpdatePPS(int pid, int psid)
+        public static bool UpdatePPS(int pid, int psid)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
             int rowAffected = 0;
@@ -73,7 +73,7 @@ namespace DataLayer
             }
         }
 
-        public bool AddPPS(int pid, int psid)
+        public static bool AddPPS(int pid, int psid)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
             int rowAffected = 0;

@@ -42,24 +42,24 @@ namespace DataLayer
             }
             return results;
         }
-        public static Product_Supplier GetPSByID(int id)
+        public static int GetPSID_By_P_SID(int pid, int sid)
         {
 
             SqlConnection connection = TravelExpertsDB.GetConnection();
-            Product_Supplier result = new Product_Supplier();
+            int result = 0;
+
             try
             {
-                string sql = "SELECT ProductSupplierID, ProductId, " +
-                    " SupplierId FROM Products_Suppliers " +
-                    " WHERE ProductSupplierID=" + id;
+                string sql = "SELECT ProductSupplierId " +
+                    " FROM Products_Suppliers " +
+                    " WHERE ProductId=" + pid + " AND SupplierId=" + sid;
+
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataReader reader =
                     command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
                 reader.Read();
 
-                result.ProductSupplierId = Convert.ToInt32(reader["ProductSupplierId"]);
-                result.ProductId = Convert.ToInt32(reader["ProductId"]);
-                result.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+                result = Convert.ToInt32(reader["ProductSupplierId"]);
             }
             catch (Exception ex)
             {
@@ -72,25 +72,25 @@ namespace DataLayer
             return result;
 
         }
-        public static List<Product_Supplier> GetPSByProductID(int pid)
+        public static List<Supplier> GetSuppliersByProductID(int pid)
         {
 
             SqlConnection connection = TravelExpertsDB.GetConnection();
-            List <Product_Supplier> results = new List<Product_Supplier>();
+            List<Supplier> results = new List<Supplier>();
             try
             {
-                string sql = "SELECT ProductSupplierId, ProductId, " +
-                    " SupplierId FROM Products_Suppliers " +
-                    " WHERE ProductId=" + pid;
+                string sql = "SELECT SupplierId, SupName FROM Suppliers " +
+                    " WHERE SupplierId = ANY (SELECT SupplierId " +
+                    " FROM Products_Suppliers " +
+                    " WHERE ProductId =" + pid + ")";
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataReader reader =
                     command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
                 while (reader.Read())
                 {
-                    Product_Supplier s = new Product_Supplier();
-                    s.ProductSupplierId = Convert.ToInt32(reader["ProductSupplierId"]);
-                    s.ProductId = Convert.ToInt32(reader["ProductId"]);
+                    Supplier s = new Supplier();
                     s.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+                    s.SupName = reader["SupName"].ToString();
                     results.Add(s);
                 }
             }
@@ -103,7 +103,6 @@ namespace DataLayer
                 connection.Close();
             }
             return results;
-
         }
 
         public static bool UpdatePS(int psid, int pid, int sid)
@@ -173,7 +172,6 @@ namespace DataLayer
             {
                 return false;
             }
-
         }
     }
 }

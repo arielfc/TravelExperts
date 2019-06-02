@@ -136,6 +136,54 @@ namespace DataLayer
 
             return savedPackageID;
         }
+        // 20190602 Add static 
+        public static int AddPackageForForm2(string pkgname, DateTime startdate,
+            DateTime enddate, string desc, decimal baseprice, decimal comm)
+        {
+            SqlConnection connection = TravelExpertsDB.GetConnection();
+            int rowAffected = 0;
+            int pId = 0;
+            try
+            {
+                string sql =
+                    "INSERT INTO Packages (PkgName, PkgStartDate, PkgEndDate, PkgDesc, PkgBasePrice, PkgAgencyCommission) " +
+                                 " VALUES (@pkgname, @startdate, @enddate, @desc, @baseprice, @comm);";
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                command.Parameters.AddWithValue("@pkgname", pkgname);
+                command.Parameters.AddWithValue("@startdate", startdate);
+                command.Parameters.AddWithValue("@enddate", enddate);
+                command.Parameters.AddWithValue("@desc", desc);
+                command.Parameters.AddWithValue("@baseprice", baseprice);
+                command.Parameters.AddWithValue("@comm", comm);
+                rowAffected = command.ExecuteNonQuery();
+                string sql1 = "SELECT PackageId FROM Packages " +
+                    " WHERE PkgName=" + "'" + pkgname + "'";
+                SqlCommand command1 = new SqlCommand(sql1, connection);
+                SqlDataReader reader =
+                    command1.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+                reader.Read();
+                pId = Convert.ToInt32(reader["PackageId"]);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            if (rowAffected > 0)
+            {
+                return pId;
+            }
+            else
+            {
+                return -1;
+            }
+
+        }
+
         //public List<Package> GetPackages()
         //{
         //    SqlConnection connection = TravelExpertsDB.GetConnection();

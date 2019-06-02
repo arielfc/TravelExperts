@@ -8,7 +8,7 @@ using BusinessLayer;
 
 namespace DataLayer
 {
-    public  class SuppliersDB
+    public class SuppliersDB
     {
         public static List<Supplier> GetSuppliers()
         {
