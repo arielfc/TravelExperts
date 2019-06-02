@@ -352,7 +352,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel4.Controls.Add(this.panel13);
             this.panel4.Controls.Add(this.panel21);
             this.panel4.Controls.Add(this.panel19);
             this.panel4.Controls.Add(this.panel20);
@@ -381,7 +380,7 @@
             this.panel13.Controls.Add(this.lblItemList);
             this.panel13.Controls.Add(this.panel22);
             this.panel13.Controls.Add(this.comboBox2);
-            this.panel13.Location = new System.Drawing.Point(636, 28);
+            this.panel13.Location = new System.Drawing.Point(89, 68);
             this.panel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(446, 855);
@@ -665,6 +664,7 @@
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.White;
+            this.panel18.Controls.Add(this.panel13);
             this.panel18.Controls.Add(this.label12);
             this.panel18.Controls.Add(this.pictureBox3);
             this.panel18.Location = new System.Drawing.Point(81, 28);

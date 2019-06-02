@@ -44,8 +44,10 @@ namespace TravelExperts
             int Box1_initialIndex = 0;
             listBox1.SetSelected(Box1_initialIndex, true);
             LoadSupplierBox(products[Box1_initialIndex].ProductId);
+            button2.Text = char.ConvertFromUtf32(0x2193);
+            button8.Text = char.ConvertFromUtf32(0x2191);
         }
-
+        
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadSupplierBox(products[listBox1.SelectedIndex].ProductId);
@@ -107,13 +109,13 @@ namespace TravelExperts
 
         private void button4_Click(object sender, EventArgs e)
         {
-            /*
+            
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 MessageBox.Show(textBox7.Text, "Message", 
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            */
+            
             int newID = PackagesDB.AddPackageForForm2(textBox7.Text,
                                             dateTimePicker1.Value, dateTimePicker2.Value,
                                             textBox9.Text,

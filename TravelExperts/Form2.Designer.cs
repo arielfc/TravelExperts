@@ -114,17 +114,19 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(38, 280);
+            this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(38, 270);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(345, 26);
+            this.dateTimePicker2.Size = new System.Drawing.Size(345, 37);
             this.dateTimePicker2.TabIndex = 90;
             this.dateTimePicker2.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePicker2_Validating);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(38, 179);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(38, 167);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(345, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(345, 37);
             this.dateTimePicker1.TabIndex = 89;
             // 
             // button4
@@ -133,7 +135,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(597, 765);
+            this.button4.Location = new System.Drawing.Point(443, 721);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(345, 58);
@@ -153,52 +155,52 @@
             this.panel2.Controls.Add(this.listBox1);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.listBox2);
-            this.panel2.Location = new System.Drawing.Point(455, 35);
+            this.panel2.Location = new System.Drawing.Point(422, 17);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(639, 596);
+            this.panel2.Size = new System.Drawing.Size(701, 683);
             this.panel2.TabIndex = 87;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(302, 104);
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(301, 65);
             this.label11.Name = "label11";
             this.label11.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label11.Size = new System.Drawing.Size(91, 39);
+            this.label11.Size = new System.Drawing.Size(127, 48);
             this.label11.TabIndex = 113;
             this.label11.Text = "Supplier";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(50, 104);
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(16, 65);
             this.label10.Name = "label10";
             this.label10.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label10.Size = new System.Drawing.Size(98, 39);
+            this.label10.Size = new System.Drawing.Size(135, 48);
             this.label10.TabIndex = 112;
             this.label10.Text = "Products";
             // 
             // listBox3
             // 
+            this.listBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox3.FormattingEnabled = true;
             this.listBox3.HorizontalScrollbar = true;
-            this.listBox3.ItemHeight = 20;
-            this.listBox3.Location = new System.Drawing.Point(243, 394);
+            this.listBox3.ItemHeight = 30;
+            this.listBox3.Location = new System.Drawing.Point(228, 503);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(335, 164);
+            this.listBox3.Size = new System.Drawing.Size(418, 154);
             this.listBox3.TabIndex = 109;
             this.listBox3.Validating += new System.ComponentModel.CancelEventHandler(this.listBox3_Validating);
             // 
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(54, 485);
+            this.button8.Location = new System.Drawing.Point(329, 412);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(158, 60);
+            this.button8.Size = new System.Drawing.Size(61, 61);
             this.button8.TabIndex = 108;
-            this.button8.Text = "<=Delete from Package";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -206,53 +208,55 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(49, 21);
+            this.label8.Location = new System.Drawing.Point(16, 5);
             this.label8.Name = "label8";
             this.label8.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label8.Size = new System.Drawing.Size(407, 78);
+            this.label8.Size = new System.Drawing.Size(400, 48);
             this.label8.TabIndex = 101;
-            this.label8.Text = "Choose Products and Suppliers \r\nin this new package:";
+            this.label8.Text = "Choose Products and Suppliers";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(242, 334);
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(16, 503);
             this.label9.Name = "label9";
             this.label9.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label9.Size = new System.Drawing.Size(214, 60);
+            this.label9.Size = new System.Drawing.Size(191, 108);
             this.label9.TabIndex = 105;
-            this.label9.Text = "Now this new package \r\nhas products below";
+            this.label9.Text = "Now this new\r\npackage has\r\nproducts:";
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(54, 167);
+            this.listBox1.HorizontalScrollbar = true;
+            this.listBox1.ItemHeight = 30;
+            this.listBox1.Location = new System.Drawing.Point(21, 128);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(196, 164);
+            this.listBox1.Size = new System.Drawing.Size(241, 244);
             this.listBox1.TabIndex = 102;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(54, 394);
+            this.button2.Location = new System.Drawing.Point(228, 412);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(158, 67);
+            this.button2.Size = new System.Drawing.Size(61, 61);
             this.button2.TabIndex = 104;
-            this.button2.Text = "Add to Package=>";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listBox2
             // 
+            this.listBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox2.FormattingEnabled = true;
             this.listBox2.HorizontalScrollbar = true;
-            this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(306, 167);
+            this.listBox2.ItemHeight = 30;
+            this.listBox2.Location = new System.Drawing.Point(306, 128);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(272, 164);
+            this.listBox2.Size = new System.Drawing.Size(370, 244);
             this.listBox2.TabIndex = 103;
             // 
             // button1
@@ -261,7 +265,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(38, 765);
+            this.button1.Location = new System.Drawing.Point(38, 721);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(345, 58);
@@ -409,7 +413,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 17);
+            this.label1.Location = new System.Drawing.Point(22, 22);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.label1.Size = new System.Drawing.Size(121, 48);
