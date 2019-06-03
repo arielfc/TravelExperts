@@ -14,6 +14,12 @@ namespace TravelExperts
 {
     public partial class Form1 : Form
     {
+        // Relationship list between panel and radio button:
+        // RadioButton1("Products")----> Panel 13
+        // RadioButton2("Suppliers")----> Panel 13 (Share same panel with "products")
+        // RsdioButton3("Product Suppliers)----> Panel 25
+        // RadioButton4("Packages")----> Panel 14 (combobox), panel 15 (details)
+
         // 20190529 moved here -> global
         PackagesDB packageManager = new PackagesDB();
         SuppliersDB supplierManager = new SuppliersDB();
@@ -84,10 +90,11 @@ namespace TravelExperts
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
-				this.panel14.SendToBack();
-				this.panel15.SendToBack();
-				//Show panel13
-				this.panel13.BringToFront();
+            //this.panel14.SendToBack();
+            //this.panel15.SendToBack();
+            //Show panel13
+            panelProductSuppliers.Hide();
+            this.panel13.BringToFront();
 				this.panel13.Visible = true;
 			// Set combobox's datasource to products table
 			comboBox2.DataSource = ProductsDB.GetProducts();
@@ -121,11 +128,12 @@ namespace TravelExperts
 		// Radio-button-Click event on "Suppliers"----Edit/Add supplier
 		private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-			// Set panels visibilities, show panel related to Supliers "edit" and "Add"
-			this.panel14.SendToBack();
-			this.panel15.SendToBack();
-			//Show panel13
-			this.panel13.BringToFront();
+            // Set panels visibilities, show panel related to Supliers "edit" and "Add"
+            //this.panel14.SendToBack();
+            //this.panel15.SendToBack();
+            panelProductSuppliers.Hide();
+            //Show panel13
+            this.panel13.BringToFront();
 			this.panel13.Visible = true;
 
 			// Set datasource of combobox to "Suppliers"
@@ -570,12 +578,7 @@ namespace TravelExperts
             txtUpdateItem.Text = comboBox2.Text;
             txtAddItem.Text = "";
         }
-
-        private void RadioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
+ 
         private void ComboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             //int fid;
