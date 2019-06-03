@@ -183,10 +183,14 @@ namespace TravelExperts
                     }
                 }
             }
-
             listBox3.DataSource = null;
             list3.Clear();
             list3_ToDB.Clear();
+
+            textBox7.Text = "";
+            textBox9.Text = "";
+            textBox11.Text = "";
+            textBox10.Text = "";
         }
 
         private void dateTimePicker2_Validating(object sender, CancelEventArgs e)
