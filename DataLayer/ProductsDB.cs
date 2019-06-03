@@ -70,7 +70,9 @@ namespace DataLayer
 
         }
 
-        public static int GetProductId(string name)
+		// ------------Added by Wei Guang Yan----------------
+		// Method to get product's id by its name
+		public static int GetProductId(string name)
         {
 
             SqlConnection connection = TravelExpertsDB.GetConnection();
@@ -96,6 +98,7 @@ namespace DataLayer
             return result;
 
         }
+
         public static Product GetProductByName(string n)
         {
 
@@ -124,6 +127,7 @@ namespace DataLayer
             return result;
 
         }
+
         public static bool UpdateProduct(int id, string name)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
@@ -156,6 +160,8 @@ namespace DataLayer
             }
         }
 
+		// -----------Correct by Wei Guang Yan------------
+		// Correct spelling errors in "sql" string
         public static bool AddProduct(string name)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();

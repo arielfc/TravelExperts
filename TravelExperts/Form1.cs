@@ -20,7 +20,10 @@ namespace TravelExperts
         // 20190602 make pkges as combox datasource
         List<Package> pkges = new List<Package>();
 
-        //Set Panel status
+		// --------Add by Wei Guang Yan----------
+		//Set Panel status--use for "products" and "suppliers"
+		// They share same panel, and use follow status as flage 
+		// to change relevant labels and buttons display
         enum PanelStatus {Products, Suppliers}
 		PanelStatus panelStatus;
 
@@ -29,7 +32,8 @@ namespace TravelExperts
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+
+		private void Form1_Load(object sender, EventArgs e)
         {
             this.panel14.BringToFront();
             this.panel14.BringToFront();
@@ -75,7 +79,8 @@ namespace TravelExperts
             this.panel4.BringToFront();
         }
 
-	// Radio-button-Click event on "Products"----Edit/Add product
+		// ------------Added by Wei Guang Yan----------------
+		// Radio-button-Click event on "Products"----Edit/Add product
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -84,12 +89,15 @@ namespace TravelExperts
 				//Show panel13
 				this.panel13.BringToFront();
 				this.panel13.Visible = true;
-
+			// Set combobox's datasource to products table
 			comboBox2.DataSource = ProductsDB.GetProducts();
             comboBox2.DisplayMember = "ProdName";
             comboBox2.ValueMember = "ProductId";
 
+			// Set panel status as "products" for "update" and "add" button checking
 			panelStatus = PanelStatus.Products;
+
+			// Set desplay of relevant labels and buttons, and clear "Add" textbox
 			lblItemList.Text = "Products";
 			lblUpdateItem.Text = "Update Product:";
 			btnUpdate.Text = "Update Product";
@@ -109,19 +117,23 @@ namespace TravelExperts
             }
         }
 
-	// Radio-button-Click event on "Suppliers"----Edit/Add supplier
+		// ------------Added by Wei Guang Yan----------------
+		// Radio-button-Click event on "Suppliers"----Edit/Add supplier
 		private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-				this.panel14.SendToBack();
-				this.panel15.SendToBack();
-				//Show panel13
-				this.panel13.BringToFront();
-				this.panel13.Visible = true;
+			// Set panels visibilities, show panel related to Supliers "edit" and "Add"
+			this.panel14.SendToBack();
+			this.panel15.SendToBack();
+			//Show panel13
+			this.panel13.BringToFront();
+			this.panel13.Visible = true;
 
+			// Set datasource of combobox to "Suppliers"
 			comboBox2.DataSource = SuppliersDB.GetSuppliers();
 			comboBox2.DisplayMember = "SupName";
 			comboBox2.ValueMember = "SupplierId";
 
+			// Set desplay of relevant labels and buttons, and clear "Add" textbox
 			panelStatus = PanelStatus.Suppliers;
 			lblItemList.Text = "Suppliers";
 			lblUpdateItem.Text = "Update Supplier:";
@@ -163,6 +175,8 @@ namespace TravelExperts
             txtCommission.Text = pkg.PkgAgencyCommission.ToString();
         }
 
+		// ------------Added by Wei Guang Yan----------------
+		// Change textbox content as conbobox select item's name when combobox selected index changed
 		private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (comboBox2.SelectedIndex == -1)
@@ -171,20 +185,6 @@ namespace TravelExperts
 			txtUpdateItem.Text = comboBox2.Text;
 		}
 
-		//**********I comment following code since I did not find where to use it. ***********
-		//**********Please check and delete this part code. From Wei***************
-		//private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-		//{
-		//	if (comboBox1.SelectedIndex == -1)
-		//		return;
-
-
-		//	Supplier supplier = new Supplier();
-		//	supplier = supplierManager.GetSupplierByID(comboBox1.SelectedIndex + 1);
-
-		//	//txtName.Text = supplier.SupplierId;
-		//	//txtStartDate.Text = supplier.SupName;
-		//}
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -224,16 +224,23 @@ namespace TravelExperts
 
         }
 
-	// Button-Click Event for Updating
-        private void btnUpdate_Click(object sender, EventArgs e)
+		// ------------Added by Wei Guang Yan----------------
+		// Button-Click Event for Updating
+		private void btnUpdate_Click(object sender, EventArgs e)
         {
+			// Clear whitespace ahead of and end of string in textbox
 			string txtUpdate = txtUpdateItem.Text.Trim();
+
+			// If panelstatus is set as "products" by radio-button, 
+			// excute update validation and update method for select product
 			if (panelStatus==PanelStatus.Products)
 			{
 				if (UpdateProductValidation(txtUpdate)==true)
 					UpdateProduct(txtUpdate);
 			}
-			else if(panelStatus==PanelStatus.Suppliers)
+			// If panelstatus is set as "suppliers" by radio-button, 
+			// excute update validation and update method for select supplier
+			else if (panelStatus==PanelStatus.Suppliers)
 			{
 				if (UpdateSupplierValidation(txtUpdate) == true)
 					UpdateSupplier(txtUpdate);
@@ -243,10 +250,11 @@ namespace TravelExperts
 			}
         }
 
-	// Validate input of product name before updating
+		// ------------Added by Wei Guang Yan----------------
+		// Validate input of product name before updating
 		public bool UpdateProductValidation(string txtUpdate)
 		{
-		// Initialization for messagebox
+		// Initialization of parameters transfered to messagebox
 			string message;
 			string title = "Product Update";
 			MessageBoxButtons button = MessageBoxButtons.OK;
@@ -260,7 +268,8 @@ namespace TravelExperts
 				return false;
 			}
 		
-		// Check whether input is duplicate with any item of table contents
+		// Check whether input is duplicate with any item of combobox display contents.
+		// If duplicated, show warning message.
 			int cunt = comboBox2.Items.Count;
 			for (int i = 0; i < cunt; i++)
 			{
@@ -282,7 +291,8 @@ namespace TravelExperts
 
 		}
 
-	// Update product name to database
+		// ------------Added by Wei Guang Yan----------------
+		// Method of updating product name to database
 		public void UpdateProduct(string txtUpdate)
 		{
 		// Initialization for messagebox
@@ -314,7 +324,8 @@ namespace TravelExperts
 			MessageBox.Show(message, title, button, icon);
 		}
 
-	// Validate input of supplier before updating
+		// ------------Added by Wei Guang Yan----------------
+		// Validate textbox input before updating supplier
 		public bool UpdateSupplierValidation(string txtUpdate)
 		{
 		// Initialization for messagebox
@@ -351,8 +362,9 @@ namespace TravelExperts
 			}
 			return true;
 		}
-		
-	// Update suplier's name to database
+
+		// ------------Added by Wei Guang Yan----------------
+		// method of Updating suplier's name to database
 		public void UpdateSupplier(string txtUpdate)
 		{
 		// Initialization for messagebox
@@ -385,16 +397,25 @@ namespace TravelExperts
 		}
 
 
-	// Button-Click Event for Adding
+		// ------------Added by Wei Guang Yan----------------
+		// Button-Click Event for Adding
 		private void btnAdd_Click(object sender, EventArgs e)
         {
-           	string txtAdd = txtAddItem.Text.Trim();
-			if(panelStatus==PanelStatus.Products)
+
+			// Clear whitespace ahead of and end of string in textbox
+			string txtAdd = txtAddItem.Text.Trim();
+
+			// If panelstatus is set as "products" by radio-button, 
+			// excute "add" validation and "add" method for select product
+			if (panelStatus==PanelStatus.Products)
 			{
 				if (AddProductValidation(txtAdd) ==true)
 					AddProduct(txtAdd);
 			}
-		   else if(panelStatus == PanelStatus.Suppliers)
+
+			// If panelstatus is set as "suppliers" by radio-button, 
+			// excute "add" validation and "add" method for select supplier
+			else if (panelStatus == PanelStatus.Suppliers)
 			{
 				if (AddSupplierValidation(txtAdd) == true)
 					AddSupplier(txtAdd);
@@ -404,8 +425,9 @@ namespace TravelExperts
 
 			}
         }
-		
-	// Validate input of product before insert
+
+		// ------------Added by Wei Guang Yan----------------
+		// Validate input textbox before inserting product 
 		public bool AddProductValidation(string txtAdd)
 		{
 		// Innitialize for messagebox
@@ -438,8 +460,9 @@ namespace TravelExperts
 			}
 			return true;
 		}
-		
-	// Insert product name to database
+
+		// ------------Added by Wei Guang Yan----------------
+		// Method of inserting product name to database
 		public void AddProduct(string txtAdd)
 		{
 		// Innitialize for messagebox
@@ -470,7 +493,8 @@ namespace TravelExperts
 			MessageBox.Show(message, title, button, icon);
 		}
 
-	// Validate input of supplier before insert
+		// ------------Added by Wei Guang Yan----------------
+		// Validate input textbox of supplier before insert
 		public bool AddSupplierValidation(string txtAdd)
 		{
 		// Innitialize for messagebox
@@ -504,7 +528,8 @@ namespace TravelExperts
 			return true;
 		}
 
-	// Insert suplier's name to database
+		// ------------Added by Wei Guang Yan----------------
+		// Method of inserting suplier's name to database
 		public void AddSupplier(string txtAdd)
 		{
 		// Innitialize for messagebox
@@ -538,6 +563,7 @@ namespace TravelExperts
 			MessageBox.Show(message, title, button, icon);
 		}
 
+		// ------------Added by Wei Guang Yan----------------
 		// Cancel operation of updating or Adding, reset all textboxes to default values
 		private void btnCancel_Click(object sender, EventArgs e)
         {

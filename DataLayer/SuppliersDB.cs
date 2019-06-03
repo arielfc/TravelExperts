@@ -31,7 +31,6 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-				throw ex;
             }
             finally
             {
@@ -39,7 +38,10 @@ namespace DataLayer
             }
             return results;
         }
-        public Supplier GetSupplierByID(int id)
+
+		// ------------Added by Wei Guang Yan----------------
+		// Method to get one supplier by specialized "id"
+		public Supplier GetSupplierByID(int id)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
             Supplier result = new Supplier();
@@ -66,6 +68,7 @@ namespace DataLayer
             return result;
 
         }
+
         public static List<Supplier> GetSupplierListByID(int id)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
@@ -98,6 +101,9 @@ namespace DataLayer
 
         }
 
+
+		// ------------Added by Wei Guang Yan----------------
+		// Method to get maximum id from table "Suppliers"
 		public static int GetMaxId()
 		{
 
@@ -124,7 +130,8 @@ namespace DataLayer
 
 		}
 
-
+		// --------Corrected by Wei Guang  Yan----------
+		// Add argument "id" to method since "id" field in suppliers table is ont identity
 		public static bool UpdateSupplier (int id, string name)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
@@ -157,7 +164,9 @@ namespace DataLayer
             }
         }
 
-        public static bool AddSupplier(int id, string name)
+		// --------Corrected by Wei Guang  Yan----------
+		// Add command.paremeters.ddWithValue of "id:
+		public static bool AddSupplier(int id, string name)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();
             int rowAffected = 0;
