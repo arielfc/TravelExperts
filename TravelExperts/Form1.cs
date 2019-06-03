@@ -35,6 +35,7 @@ namespace TravelExperts
 
 		private void Form1_Load(object sender, EventArgs e)
         {
+            panelProductSuppliers.Hide();
             this.panel14.BringToFront();
             this.panel14.BringToFront();
             this.panel13.BringToFront();
@@ -75,8 +76,7 @@ namespace TravelExperts
         
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
-            this.panel14.SendToBack();
-            this.panel4.BringToFront();
+
         }
 
 		// ------------Added by Wei Guang Yan----------------
@@ -569,6 +569,81 @@ namespace TravelExperts
         {
             txtUpdateItem.Text = comboBox2.Text;
             txtAddItem.Text = "";
+        }
+
+        private void RadioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //int fid;
+            //bool parseOK = Int32.TryParse(comboBox3.SelectedValue.ToString(), out fid);
+            //comboBox4.DataSource = Products_SuppliersDB.GetSuppliersByProductID(fid);
+            //comboBox4.DisplayMember = "SupName";
+            //comboBox4.ValueMember = "SupplierId";
+        }
+
+        private void RadioButton3_CheckedChanged_1(object sender, EventArgs e)
+        {
+            panelProductSuppliers.Show();
+
+            comboBox3.DataSource = ProductsDB.GetProducts();
+            comboBox3.DisplayMember = "ProdName";
+            comboBox3.ValueMember = "ProductId";
+
+            int fid;
+            bool parseOK = Int32.TryParse(comboBox3.SelectedValue.ToString(), out fid);
+            comboBox4.DataSource = Products_SuppliersDB.GetSuppliersByProductID(fid);
+            comboBox4.DisplayMember = "SupName";
+            comboBox4.ValueMember = "SupplierId";
+
+            comboBox7.DataSource = ProductsDB.GetProducts();
+            comboBox7.DisplayMember = "ProdName";
+            comboBox7.ValueMember = "ProductId";
+
+            
+            comboBox6.DataSource = Products_SuppliersDB.GetSuppliersByProductID(fid);
+            comboBox6.DisplayMember = "SupName";
+            comboBox6.ValueMember = "SupplierId";
+
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            int pid = Convert.ToInt32(comboBox7.SelectedValue);
+            int sid = Convert.ToInt32(comboBox6.SelectedValue);
+            int psid = Products_SuppliersDB.GetPSID_By_P_SID(pid, sid);
+
+            Products_SuppliersDB.UpdatePS(psid, pid, sid);
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            int prodID = Convert.ToInt32(comboBox3.SelectedValue);
+            int supID = Convert.ToInt32(comboBox4.SelectedValue);
+            Products_SuppliersDB.AddPS(prodID, supID);
+        }
+
+        private void ComboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int fid;
+            bool parseOK = Int32.TryParse(comboBox7.SelectedValue.ToString(), out fid);
+            comboBox6.DataSource = Products_SuppliersDB.GetSuppliersByProductID(fid);
+            comboBox6.DisplayMember = "SupName";
+            comboBox6.ValueMember = "SupplierId";
+        }
+
+        private void ComboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
