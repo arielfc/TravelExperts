@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Created by Wei Guang Yan 20190530
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -72,7 +73,7 @@ namespace DataLayer
                 return false;
             }
         }
-
+        // Modified By Yue Yang 20190602
         public static bool AddPPS(int pid, int psid)
         {
             SqlConnection connection = TravelExpertsDB.GetConnection();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Created by Yue Yang 20190527
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ using BusinessLayer;
 
 namespace DataLayer
 {
-    public static class Products_SuppliersDB
+    public class Products_SuppliersDB
     {
         public static List<Product_Supplier> GetProducts_Suppliers()
         {
@@ -74,7 +75,6 @@ namespace DataLayer
         }
         public static List<Supplier> GetSuppliersByProductID(int pid)
         {
-
             SqlConnection connection = TravelExpertsDB.GetConnection();
             List<Supplier> results = new List<Supplier>();
             try

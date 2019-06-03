@@ -58,19 +58,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.lblAddItem = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.txtAddItem = new System.Windows.Forms.TextBox();
-            this.lblUpdateItem = new System.Windows.Forms.Label();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.txtUpdateItem = new System.Windows.Forms.TextBox();
-            this.lblItemList = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -95,6 +82,19 @@
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblAddItem = new System.Windows.Forms.Label();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.txtAddItem = new System.Windows.Forms.TextBox();
+            this.lblUpdateItem = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.txtUpdateItem = new System.Windows.Forms.TextBox();
+            this.lblItemList = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -109,12 +109,12 @@
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel18.SuspendLayout();
-            this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel15.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -511,167 +511,6 @@
             this.panel18.Size = new System.Drawing.Size(472, 171);
             this.panel18.TabIndex = 77;
             // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Controls.Add(this.btnCancel);
-            this.panel13.Controls.Add(this.btnAdd);
-            this.panel13.Controls.Add(this.btnUpdate);
-            this.panel13.Controls.Add(this.lblAddItem);
-            this.panel13.Controls.Add(this.panel24);
-            this.panel13.Controls.Add(this.txtAddItem);
-            this.panel13.Controls.Add(this.lblUpdateItem);
-            this.panel13.Controls.Add(this.panel23);
-            this.panel13.Controls.Add(this.txtUpdateItem);
-            this.panel13.Controls.Add(this.lblItemList);
-            this.panel13.Controls.Add(this.panel22);
-            this.panel13.Controls.Add(this.comboBox2);
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(446, 855);
-            this.panel13.TabIndex = 76;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(40, 783);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(345, 58);
-            this.btnCancel.TabIndex = 82;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(39, 689);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(345, 58);
-            this.btnAdd.TabIndex = 81;
-            this.btnAdd.Text = "Add Product";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(40, 303);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(345, 58);
-            this.btnUpdate.TabIndex = 80;
-            this.btnUpdate.Text = "Update Product";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // lblAddItem
-            // 
-            this.lblAddItem.AutoSize = true;
-            this.lblAddItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddItem.Location = new System.Drawing.Point(24, 563);
-            this.lblAddItem.Name = "lblAddItem";
-            this.lblAddItem.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.lblAddItem.Size = new System.Drawing.Size(188, 48);
-            this.lblAddItem.TabIndex = 77;
-            this.lblAddItem.Text = "Add Product:";
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel24.Location = new System.Drawing.Point(40, 663);
-            this.panel24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(345, 8);
-            this.panel24.TabIndex = 79;
-            // 
-            // txtAddItem
-            // 
-            this.txtAddItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddItem.Location = new System.Drawing.Point(40, 628);
-            this.txtAddItem.Margin = new System.Windows.Forms.Padding(8);
-            this.txtAddItem.Name = "txtAddItem";
-            this.txtAddItem.Size = new System.Drawing.Size(345, 30);
-            this.txtAddItem.TabIndex = 78;
-            // 
-            // lblUpdateItem
-            // 
-            this.lblUpdateItem.AutoSize = true;
-            this.lblUpdateItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateItem.Location = new System.Drawing.Point(24, 163);
-            this.lblUpdateItem.Name = "lblUpdateItem";
-            this.lblUpdateItem.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.lblUpdateItem.Size = new System.Drawing.Size(227, 48);
-            this.lblUpdateItem.TabIndex = 74;
-            this.lblUpdateItem.Text = "Update Product:";
-            // 
-            // panel23
-            // 
-            this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel23.Location = new System.Drawing.Point(40, 254);
-            this.panel23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(345, 8);
-            this.panel23.TabIndex = 76;
-            // 
-            // txtUpdateItem
-            // 
-            this.txtUpdateItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUpdateItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUpdateItem.Location = new System.Drawing.Point(40, 217);
-            this.txtUpdateItem.Margin = new System.Windows.Forms.Padding(8);
-            this.txtUpdateItem.Name = "txtUpdateItem";
-            this.txtUpdateItem.Size = new System.Drawing.Size(345, 30);
-            this.txtUpdateItem.TabIndex = 75;
-            // 
-            // lblItemList
-            // 
-            this.lblItemList.AutoSize = true;
-            this.lblItemList.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemList.Location = new System.Drawing.Point(24, 14);
-            this.lblItemList.Name = "lblItemList";
-            this.lblItemList.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.lblItemList.Size = new System.Drawing.Size(156, 54);
-            this.lblItemList.TabIndex = 73;
-            this.lblItemList.Text = "Products";
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel22.Location = new System.Drawing.Point(39, 105);
-            this.panel22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(345, 8);
-            this.panel22.TabIndex = 72;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(39, 68);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(343, 38);
-            this.comboBox2.TabIndex = 0;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -959,6 +798,167 @@
             this.panel14.Size = new System.Drawing.Size(446, 123);
             this.panel14.TabIndex = 75;
             // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Controls.Add(this.btnCancel);
+            this.panel13.Controls.Add(this.btnAdd);
+            this.panel13.Controls.Add(this.btnUpdate);
+            this.panel13.Controls.Add(this.lblAddItem);
+            this.panel13.Controls.Add(this.panel24);
+            this.panel13.Controls.Add(this.txtAddItem);
+            this.panel13.Controls.Add(this.lblUpdateItem);
+            this.panel13.Controls.Add(this.panel23);
+            this.panel13.Controls.Add(this.txtUpdateItem);
+            this.panel13.Controls.Add(this.lblItemList);
+            this.panel13.Controls.Add(this.panel22);
+            this.panel13.Controls.Add(this.comboBox2);
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(446, 855);
+            this.panel13.TabIndex = 76;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(40, 783);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(345, 58);
+            this.btnCancel.TabIndex = 82;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(39, 689);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(345, 58);
+            this.btnAdd.TabIndex = 81;
+            this.btnAdd.Text = "Add Product";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(40, 303);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(345, 58);
+            this.btnUpdate.TabIndex = 80;
+            this.btnUpdate.Text = "Update Product";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // lblAddItem
+            // 
+            this.lblAddItem.AutoSize = true;
+            this.lblAddItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddItem.Location = new System.Drawing.Point(24, 563);
+            this.lblAddItem.Name = "lblAddItem";
+            this.lblAddItem.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.lblAddItem.Size = new System.Drawing.Size(188, 48);
+            this.lblAddItem.TabIndex = 77;
+            this.lblAddItem.Text = "Add Product:";
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel24.Location = new System.Drawing.Point(40, 663);
+            this.panel24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(345, 8);
+            this.panel24.TabIndex = 79;
+            // 
+            // txtAddItem
+            // 
+            this.txtAddItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddItem.Location = new System.Drawing.Point(40, 628);
+            this.txtAddItem.Margin = new System.Windows.Forms.Padding(8);
+            this.txtAddItem.Name = "txtAddItem";
+            this.txtAddItem.Size = new System.Drawing.Size(345, 30);
+            this.txtAddItem.TabIndex = 78;
+            // 
+            // lblUpdateItem
+            // 
+            this.lblUpdateItem.AutoSize = true;
+            this.lblUpdateItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpdateItem.Location = new System.Drawing.Point(24, 163);
+            this.lblUpdateItem.Name = "lblUpdateItem";
+            this.lblUpdateItem.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.lblUpdateItem.Size = new System.Drawing.Size(227, 48);
+            this.lblUpdateItem.TabIndex = 74;
+            this.lblUpdateItem.Text = "Update Product:";
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel23.Location = new System.Drawing.Point(40, 254);
+            this.panel23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(345, 8);
+            this.panel23.TabIndex = 76;
+            // 
+            // txtUpdateItem
+            // 
+            this.txtUpdateItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUpdateItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateItem.Location = new System.Drawing.Point(40, 217);
+            this.txtUpdateItem.Margin = new System.Windows.Forms.Padding(8);
+            this.txtUpdateItem.Name = "txtUpdateItem";
+            this.txtUpdateItem.Size = new System.Drawing.Size(345, 30);
+            this.txtUpdateItem.TabIndex = 75;
+            // 
+            // lblItemList
+            // 
+            this.lblItemList.AutoSize = true;
+            this.lblItemList.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemList.Location = new System.Drawing.Point(24, 14);
+            this.lblItemList.Name = "lblItemList";
+            this.lblItemList.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.lblItemList.Size = new System.Drawing.Size(156, 54);
+            this.lblItemList.TabIndex = 73;
+            this.lblItemList.Text = "Products";
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel22.Location = new System.Drawing.Point(39, 105);
+            this.panel22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(345, 8);
+            this.panel22.TabIndex = 72;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.White;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(39, 68);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(343, 38);
+            this.comboBox2.TabIndex = 0;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -1013,8 +1013,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
@@ -1022,6 +1020,8 @@
             this.panel16.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.ResumeLayout(false);
 
         }

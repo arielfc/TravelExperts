@@ -70,6 +70,7 @@
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel13.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -78,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel13
@@ -190,7 +192,7 @@
             this.listBox3.ItemHeight = 30;
             this.listBox3.Location = new System.Drawing.Point(228, 503);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(418, 154);
+            this.listBox3.Size = new System.Drawing.Size(448, 154);
             this.listBox3.TabIndex = 109;
             this.listBox3.Validating += new System.ComponentModel.CancelEventHandler(this.listBox3_Validating);
             // 
@@ -452,6 +454,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(345, 30);
             this.textBox11.TabIndex = 67;
+            this.textBox11.Validating += new System.ComponentModel.CancelEventHandler(this.textBox11_Validating);
             // 
             // textBox5
             // 
@@ -509,6 +512,10 @@
             // 
             this.errorProvider5.ContainerControl = this;
             // 
+            // errorProvider6
+            // 
+            this.errorProvider6.ContainerControl = this;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -533,6 +540,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -579,5 +587,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ErrorProvider errorProvider5;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Created by Yue Yang 20190527
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,7 +44,6 @@ namespace DataLayer
 
         public static Product GetProductByID(int id)
         {
-
             SqlConnection connection = TravelExpertsDB.GetConnection();
             Product result = new Product();
             try

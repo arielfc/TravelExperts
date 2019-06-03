@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Created By Ariel
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -136,7 +137,7 @@ namespace DataLayer
 
             return savedPackageID;
         }
-        // 20190602 Add static 
+        // Modified By Yue Yang 20190602 Add AddPackageForForm2
         public static int AddPackageForForm2(string pkgname, DateTime startdate,
             DateTime enddate, string desc, decimal baseprice, decimal comm)
         {

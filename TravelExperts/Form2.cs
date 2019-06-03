@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Form Created by Ariel
+// Modified by Yue Yang
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -109,13 +111,58 @@ namespace TravelExperts
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
-            if (ValidateChildren(ValidationConstraints.Enabled))
+            if (string.IsNullOrWhiteSpace(textBox7.Text))
             {
-                MessageBox.Show(textBox7.Text, "Message", 
+                MessageBox.Show("Please Enter a Package Name !", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
-            
+            if (dateTimePicker1.Value >= dateTimePicker2.Value)
+            {
+                MessageBox.Show("Package End Date must be later than Package Start Date !",
+                    "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox9.Text))
+            {
+                MessageBox.Show("Please Enter Package Description !",
+                    "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(textBox11.Text))
+            {
+                MessageBox.Show("Please Enter Base Price !",
+                    "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(textBox10.Text))
+            {
+                MessageBox.Show("Please Enter Agency Commission !",
+                    "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (Convert.ToInt32(textBox10.Text) > Convert.ToInt32(textBox11.Text))
+            {
+                MessageBox.Show("Agency Commission cannot be greater than the Base Price !",
+                    "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+
+            }
+            if (list3_ToDB.Count == 0)
+            {
+                MessageBox.Show("Please choose products for this package !",
+                    "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+
             int newID = PackagesDB.AddPackageForForm2(textBox7.Text,
                                             dateTimePicker1.Value, dateTimePicker2.Value,
                                             textBox9.Text,
@@ -172,20 +219,44 @@ namespace TravelExperts
                 errorProvider3.SetError(textBox9, null);
             }
         }
-
-        private void textBox10_Validating(object sender, CancelEventArgs e)
+        private void textBox11_Validating(object sender, CancelEventArgs e)
         {
-            if (Convert.ToInt32(textBox10.Text) > Convert.ToInt32(textBox11.Text))
+            if (string.IsNullOrWhiteSpace(textBox11.Text))
             {
                 e.Cancel = true;
-                textBox10.Focus();
-                errorProvider4.SetError(textBox10,
-                    "Agency Commission cannot be greater than the Base Price !");
+                textBox11.Focus();
+                errorProvider6.SetError(textBox11,
+                    "Please Enter Base Price !");
             }
             else
             {
                 e.Cancel = false;
-                errorProvider4.SetError(textBox10, null);
+                errorProvider6.SetError(textBox11, null);
+            }
+        }
+        private void textBox10_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox10.Text))
+            {
+                e.Cancel = true;
+                textBox10.Focus();
+                errorProvider4.SetError(textBox10,
+                    "Please Enter Agency Commission !");
+            }
+            else
+            {
+                if (Convert.ToInt32(textBox10.Text) > Convert.ToInt32(textBox11.Text))
+                {
+                    e.Cancel = true;
+                    textBox10.Focus();
+                    errorProvider4.SetError(textBox10,
+                        "Agency Commission cannot be greater than the Base Price !");
+                }
+                else
+                {
+                    e.Cancel = false;
+                    errorProvider4.SetError(textBox10, null);
+                }
             }
         }
 
@@ -208,5 +279,7 @@ namespace TravelExperts
         {
             this.Close();
         }
+
+        
     }
 }
