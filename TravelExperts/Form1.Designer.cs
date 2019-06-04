@@ -42,10 +42,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panelProductSuppliers = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
@@ -76,27 +73,6 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCommission = new System.Windows.Forms.TextBox();
-            this.txtDesc = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -113,12 +89,30 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCommission = new System.Windows.Forms.TextBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panelProductSuppliers.SuspendLayout();
             this.panel25.SuspendLayout();
             this.panel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -128,11 +122,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel15.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel16.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -341,42 +334,21 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(39, 68);
+            this.comboBox1.Location = new System.Drawing.Point(40, 86);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(343, 38);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(24, 103);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label6.Size = new System.Drawing.Size(163, 48);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Start Date :";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel10.Location = new System.Drawing.Point(39, 194);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(345, 8);
-            this.panel10.TabIndex = 56;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel4.Controls.Add(this.panelProductSuppliers);
+            this.panel4.Controls.Add(this.panel25);
             this.panel4.Controls.Add(this.panel21);
+            this.panel4.Controls.Add(this.panel13);
             this.panel4.Controls.Add(this.panel19);
             this.panel4.Controls.Add(this.panel20);
             this.panel4.Controls.Add(this.panel18);
-            this.panel4.Controls.Add(this.panel15);
             this.panel4.Controls.Add(this.panel14);
             this.panel4.Location = new System.Drawing.Point(410, 105);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -384,15 +356,6 @@
             this.panel4.Size = new System.Drawing.Size(1142, 894);
             this.panel4.TabIndex = 2;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // panelProductSuppliers
-            // 
-            this.panelProductSuppliers.Controls.Add(this.panel25);
-            this.panelProductSuppliers.Location = new System.Drawing.Point(606, 0);
-            this.panelProductSuppliers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panelProductSuppliers.Name = "panelProductSuppliers";
-            this.panelProductSuppliers.Size = new System.Drawing.Size(512, 894);
-            this.panelProductSuppliers.TabIndex = 3;
             // 
             // panel25
             // 
@@ -411,7 +374,7 @@
             this.panel25.Controls.Add(this.comboBox7);
             this.panel25.Controls.Add(this.button1);
             this.panel25.Controls.Add(this.comboBox4);
-            this.panel25.Location = new System.Drawing.Point(30, 26);
+            this.panel25.Location = new System.Drawing.Point(32, 212);
             this.panel25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(446, 855);
@@ -746,269 +709,33 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.White;
-            this.panel15.Controls.Add(this.panel8);
-            this.panel15.Controls.Add(this.panel17);
-            this.panel15.Controls.Add(this.panel16);
-            this.panel15.Controls.Add(this.button3);
-            this.panel15.Controls.Add(this.label1);
-            this.panel15.Controls.Add(this.button4);
-            this.panel15.Controls.Add(this.txtPrice);
-            this.panel15.Controls.Add(this.label2);
-            this.panel15.Controls.Add(this.label5);
-            this.panel15.Controls.Add(this.label6);
-            this.panel15.Controls.Add(this.panel9);
-            this.panel15.Controls.Add(this.panel11);
-            this.panel15.Controls.Add(this.panel12);
-            this.panel15.Controls.Add(this.panel10);
-            this.panel15.Controls.Add(this.panel7);
-            this.panel15.Controls.Add(this.label3);
-            this.panel15.Controls.Add(this.label4);
-            this.panel15.Controls.Add(this.txtCommission);
-            this.panel15.Controls.Add(this.txtDesc);
-            this.panel15.Controls.Add(this.txtName);
-            this.panel15.Location = new System.Drawing.Point(636, 188);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(446, 695);
-            this.panel15.TabIndex = 76;
-            this.panel15.Paint += new System.Windows.Forms.PaintEventHandler(this.panel15_Paint);
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.dateTimePicker2);
-            this.panel8.Location = new System.Drawing.Point(39, 262);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(345, 42);
-            this.panel8.TabIndex = 80;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.dateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.dateTimePicker2.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.dateTimePicker2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(-3, -3);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker2.MinimumSize = new System.Drawing.Size(350, 31);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(350, 37);
-            this.dateTimePicker2.TabIndex = 81;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel17.Location = new System.Drawing.Point(39, 303);
-            this.panel17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(345, 8);
-            this.panel17.TabIndex = 81;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.dateTimePicker1);
-            this.panel16.Location = new System.Drawing.Point(39, 152);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(345, 42);
-            this.panel16.TabIndex = 2;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(-3, -3);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(350, 31);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(350, 37);
-            this.dateTimePicker1.TabIndex = 81;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(39, 623);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 58);
-            this.button3.TabIndex = 78;
-            this.button3.Text = "Add Package";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label1.Size = new System.Drawing.Size(121, 48);
-            this.label1.TabIndex = 57;
-            this.label1.Text = "Name :";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(222, 623);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(162, 58);
-            this.button4.TabIndex = 79;
-            this.button4.Text = "Update Package";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(39, 468);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(345, 30);
-            this.txtPrice.TabIndex = 67;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 206);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label2.Size = new System.Drawing.Size(156, 48);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "End Date :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(24, 412);
-            this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label5.Size = new System.Drawing.Size(169, 48);
-            this.label5.TabIndex = 66;
-            this.label5.Text = "Base Price :";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel9.Location = new System.Drawing.Point(39, 400);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(345, 8);
-            this.panel9.TabIndex = 65;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel11.Location = new System.Drawing.Point(39, 606);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(345, 8);
-            this.panel11.TabIndex = 71;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel12.Location = new System.Drawing.Point(39, 503);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(345, 8);
-            this.panel12.TabIndex = 68;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel7.Location = new System.Drawing.Point(39, 91);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(345, 8);
-            this.panel7.TabIndex = 59;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 309);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label3.Size = new System.Drawing.Size(181, 48);
-            this.label3.TabIndex = 63;
-            this.label3.Text = "Description :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 515);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.label4.Size = new System.Drawing.Size(294, 48);
-            this.label4.TabIndex = 69;
-            this.label4.Text = "Agency Commission :";
-            // 
-            // txtCommission
-            // 
-            this.txtCommission.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCommission.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCommission.Location = new System.Drawing.Point(39, 571);
-            this.txtCommission.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.txtCommission.Name = "txtCommission";
-            this.txtCommission.Size = new System.Drawing.Size(345, 30);
-            this.txtCommission.TabIndex = 70;
-            // 
-            // txtDesc
-            // 
-            this.txtDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDesc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesc.Location = new System.Drawing.Point(39, 365);
-            this.txtDesc.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(345, 30);
-            this.txtDesc.TabIndex = 64;
-            // 
-            // txtName
-            // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(39, 55);
-            this.txtName.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(345, 30);
-            this.txtName.TabIndex = 58;
-            // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.Controls.Add(this.panel13);
+            this.panel14.Controls.Add(this.panel8);
+            this.panel14.Controls.Add(this.panel17);
+            this.panel14.Controls.Add(this.panel16);
+            this.panel14.Controls.Add(this.button3);
+            this.panel14.Controls.Add(this.button4);
+            this.panel14.Controls.Add(this.txtPrice);
+            this.panel14.Controls.Add(this.label2);
+            this.panel14.Controls.Add(this.label5);
+            this.panel14.Controls.Add(this.label6);
+            this.panel14.Controls.Add(this.panel9);
+            this.panel14.Controls.Add(this.panel11);
+            this.panel14.Controls.Add(this.panel12);
+            this.panel14.Controls.Add(this.panel10);
+            this.panel14.Controls.Add(this.label3);
+            this.panel14.Controls.Add(this.label4);
+            this.panel14.Controls.Add(this.txtCommission);
+            this.panel14.Controls.Add(this.txtDesc);
             this.panel14.Controls.Add(this.label7);
             this.panel14.Controls.Add(this.panel6);
             this.panel14.Controls.Add(this.comboBox1);
             this.panel14.Location = new System.Drawing.Point(636, 28);
             this.panel14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(446, 123);
+            this.panel14.Size = new System.Drawing.Size(446, 855);
             this.panel14.TabIndex = 75;
             // 
             // panel13
@@ -1026,7 +753,7 @@
             this.panel13.Controls.Add(this.lblItemList);
             this.panel13.Controls.Add(this.panel22);
             this.panel13.Controls.Add(this.comboBox2);
-            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Location = new System.Drawing.Point(320, 452);
             this.panel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(446, 855);
@@ -1103,7 +830,7 @@
             this.txtAddItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAddItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddItem.Location = new System.Drawing.Point(40, 628);
-            this.txtAddItem.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txtAddItem.Margin = new System.Windows.Forms.Padding(8);
             this.txtAddItem.Name = "txtAddItem";
             this.txtAddItem.Size = new System.Drawing.Size(345, 30);
             this.txtAddItem.TabIndex = 78;
@@ -1134,7 +861,7 @@
             this.txtUpdateItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUpdateItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUpdateItem.Location = new System.Drawing.Point(40, 217);
-            this.txtUpdateItem.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txtUpdateItem.Margin = new System.Windows.Forms.Padding(8);
             this.txtUpdateItem.Name = "txtUpdateItem";
             this.txtUpdateItem.Size = new System.Drawing.Size(345, 30);
             this.txtUpdateItem.TabIndex = 75;
@@ -1176,7 +903,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(24, 14);
+            this.label7.Location = new System.Drawing.Point(29, 23);
             this.label7.Name = "label7";
             this.label7.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.label7.Size = new System.Drawing.Size(282, 54);
@@ -1187,11 +914,222 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
             this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.panel6.Location = new System.Drawing.Point(39, 105);
+            this.panel6.Location = new System.Drawing.Point(40, 123);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(345, 8);
             this.panel6.TabIndex = 72;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.dateTimePicker2);
+            this.panel8.Location = new System.Drawing.Point(40, 342);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(345, 42);
+            this.panel8.TabIndex = 100;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.dateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.dateTimePicker2.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.dateTimePicker2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(-3, -3);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePicker2.MinimumSize = new System.Drawing.Size(350, 31);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(350, 37);
+            this.dateTimePicker2.TabIndex = 81;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel17.Location = new System.Drawing.Point(40, 383);
+            this.panel17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(345, 8);
+            this.panel17.TabIndex = 101;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.dateTimePicker1);
+            this.panel16.Location = new System.Drawing.Point(40, 232);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(345, 42);
+            this.panel16.TabIndex = 82;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(-3, -3);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(350, 31);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(350, 37);
+            this.dateTimePicker1.TabIndex = 81;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(40, 730);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(164, 58);
+            this.button3.TabIndex = 98;
+            this.button3.Text = "Add Package";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(225, 730);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(162, 58);
+            this.button4.TabIndex = 99;
+            this.button4.Text = "Update Package";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(40, 548);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(8);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(345, 30);
+            this.txtPrice.TabIndex = 93;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(29, 294);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.label2.Size = new System.Drawing.Size(156, 48);
+            this.label2.TabIndex = 88;
+            this.label2.Text = "End Date :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(29, 496);
+            this.label5.Name = "label5";
+            this.label5.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.label5.Size = new System.Drawing.Size(169, 48);
+            this.label5.TabIndex = 92;
+            this.label5.Text = "Base Price :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(29, 183);
+            this.label6.Name = "label6";
+            this.label6.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.label6.Size = new System.Drawing.Size(163, 48);
+            this.label6.TabIndex = 83;
+            this.label6.Text = "Start Date :";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel9.Location = new System.Drawing.Point(40, 480);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(345, 8);
+            this.panel9.TabIndex = 91;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel11.Location = new System.Drawing.Point(40, 686);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(345, 8);
+            this.panel11.TabIndex = 97;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel12.Location = new System.Drawing.Point(40, 583);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(345, 8);
+            this.panel12.TabIndex = 94;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.panel10.Location = new System.Drawing.Point(40, 274);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(345, 8);
+            this.panel10.TabIndex = 84;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(29, 396);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.label3.Size = new System.Drawing.Size(181, 48);
+            this.label3.TabIndex = 89;
+            this.label3.Text = "Description :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(29, 597);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.label4.Size = new System.Drawing.Size(294, 48);
+            this.label4.TabIndex = 95;
+            this.label4.Text = "Agency Commission :";
+            // 
+            // txtCommission
+            // 
+            this.txtCommission.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCommission.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCommission.Location = new System.Drawing.Point(40, 651);
+            this.txtCommission.Margin = new System.Windows.Forms.Padding(8);
+            this.txtCommission.Name = "txtCommission";
+            this.txtCommission.Size = new System.Drawing.Size(345, 30);
+            this.txtCommission.TabIndex = 96;
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDesc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDesc.Location = new System.Drawing.Point(40, 445);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(8);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(345, 30);
+            this.txtDesc.TabIndex = 90;
             // 
             // Form1
             // 
@@ -1215,7 +1153,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panelProductSuppliers.ResumeLayout(false);
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
             this.panel21.ResumeLayout(false);
@@ -1230,14 +1167,12 @@
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1256,33 +1191,11 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCommission;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDesc;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label label12;
@@ -1311,8 +1224,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label lblAddItem;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panelProductSuppliers;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label14;
@@ -1328,6 +1239,25 @@
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtCommission;
+        private System.Windows.Forms.TextBox txtDesc;
     }
 }
 

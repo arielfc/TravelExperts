@@ -41,18 +41,23 @@ namespace TravelExperts
 
 		private void Form1_Load(object sender, EventArgs e)
         {
-            panelProductSuppliers.Hide();
+            //panelProductSuppliers.Hide();20190604--
             this.panel14.BringToFront();
-            this.panel14.BringToFront();
-            this.panel13.BringToFront();
+            // Move panel13 and panel25 to panel14's position
+            panel13.Top = panel14.Top;// Product panel
+            panel13.Left = panel14.Left;
+            panel25.Top = panel14.Top;//20190604 Product Suppliers panel
+            panel25.Left = panel14.Left;
+            //this.panel14.BringToFront();
+            //this.panel13.BringToFront();
+            //--20190604
+
             //dataGridView1.DataSource = DataLayer.PackagesDB.GetPackages();
             pkges = packageManager.GetPackage();
             comboBox1.DataSource = pkges;
             comboBox1.DisplayMember = "PkgName";
             comboBox1.ValueMember = "PkgName";
 
-            // Invisible Panel 13 for products information
-            panel13.Visible = false;
 
         }
         // Allows Dragging Borderless Form
@@ -91,11 +96,10 @@ namespace TravelExperts
         {
 
             //this.panel14.SendToBack();
-            //this.panel15.SendToBack();
             //Show panel13
-            panelProductSuppliers.Hide();
+            //panelProductSuppliers.Hide(); 20190604
             this.panel13.BringToFront();
-				this.panel13.Visible = true;
+				//this.panel13.Visible = true;20190604
 			// Set combobox's datasource to products table
 			comboBox2.DataSource = ProductsDB.GetProducts();
             comboBox2.DisplayMember = "ProdName";
@@ -130,11 +134,11 @@ namespace TravelExperts
         {
             // Set panels visibilities, show panel related to Supliers "edit" and "Add"
             //this.panel14.SendToBack();
-            //this.panel15.SendToBack();
-            panelProductSuppliers.Hide();
+
+            //panelProductSuppliers.Hide();20190604
             //Show panel13
             this.panel13.BringToFront();
-			this.panel13.Visible = true;
+			//this.panel13.Visible = true;20190604
 
 			// Set datasource of combobox to "Suppliers"
 			comboBox2.DataSource = SuppliersDB.GetSuppliers();
@@ -150,6 +154,7 @@ namespace TravelExperts
 			btnAdd.Text = "Add Supplier";
 			txtAddItem.Clear();
 
+            /*20190604 commented
 			RadioButton rb = sender as RadioButton;
             if (rb != null)
             {
@@ -160,7 +165,7 @@ namespace TravelExperts
                     //datagridview2.source = DataLayer.SupplierDB.GetSuppliers(); 
                 }
             }
-
+            */
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -173,7 +178,6 @@ namespace TravelExperts
             //pkg = packageManager.GetPackageById(comboBox1.SelectedIndex + 1);
             pkg = pkges[comboBox1.SelectedIndex];
 
-            txtName.Text = pkg.PkgName;
             //txtStartDate.Text = pkg.PkgStartDate.ToString();
             //txtEndDate.Text = pkg.PkgEndDate.ToString();
             dateTimePicker1.Value = pkg.PkgStartDate;
@@ -217,9 +221,9 @@ namespace TravelExperts
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            this.panel13.SendToBack();
+            //this.panel13.SendToBack();20190604
+
             this.panel14.BringToFront();
-            this.panel15.BringToFront();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -227,11 +231,6 @@ namespace TravelExperts
             this.WindowState = FormWindowState.Minimized;
         }
         
-        private void panel15_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
 		// ------------Added by Wei Guang Yan----------------
 		// Button-Click Event for Updating
 		private void btnUpdate_Click(object sender, EventArgs e)
@@ -590,7 +589,11 @@ namespace TravelExperts
 
         private void RadioButton3_CheckedChanged_1(object sender, EventArgs e)
         {
-            panelProductSuppliers.Show();
+            //panelProductSuppliers.Show();20190604
+            //20190604--
+            panel25.BringToFront();
+            //panel25.Visible = true;
+            //--20190604
 
             comboBox3.DataSource = ProductsDB.GetProducts();
             comboBox3.DisplayMember = "ProdName";
